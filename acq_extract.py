@@ -4,6 +4,15 @@ import pandas as pd
 import sys
 
 # Globals
+CURRENCIES = {"francs", "dlr", "dlrs", "DLRS", "lire", "yen"}
+CURRENCY_ORIGIN = {"Belgian", "Canadian", "U.S."}
+CURRENCY_TYPE = {"cash"}
+NUMBERS = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"}
+QUANTITIES = {"billion", "mln", "MLN", "stg", "STG"}
+UNDISCLOSED = {"disclose", "disclosed","undisclosed"}
+UNDISCLOSED_NEXT = {"amount", "of", "sum", "terms"}
+UNDISCLOSED_PREV = {"a", "almost","not", "been"}
+
 FILENAME = []
 PATH = []
 STORIES = []
@@ -63,14 +72,14 @@ def writeData(docList:str):
     outFile = open(fileName, "w")
     
     for story in STORIES:
-        print("TEXT: ", story._text, file=outFile)
-        print("ACQUIRED: ", story._acquired, file=outFile)
-        print("ACQBUS: ", story._acqbus, file=outFile)
-        print("ACQLOC: ", story._acqloc, file=outFile)
-        print("DLRAMT: ", story._dlramt, file=outFile)
-        print("PURCHASER: ", story._purchaser, file=outFile)
-        print("SELLER: ", story._seller, file=outFile)
-        print("STATUS: ", story._status, file=outFile)
+        print("TEXT:", story._text, file=outFile)
+        print("ACQUIRED:", story._acquired, file=outFile)
+        print("ACQBUS:", story._acqbus, file=outFile)
+        print("ACQLOC:", story._acqloc, file=outFile)
+        print("DLRAMT:", story._dlramt, file=outFile)
+        print("PURCHASER:", story._purchaser, file=outFile)
+        print("SELLER:", story._seller, file=outFile)
+        print("STATUS:", story._status, file=outFile)
 
         outFile.write("\n")
 
