@@ -2,6 +2,14 @@
 import os 
 import pandas as pd
 import sys
+import nltk
+from nltk.tokenize import sent_tokenize, word_tokenize
+nltk.download('punkt')
+from nltk.tokenize import blankline_tokenize
+from nltk.tokenize import WhitespaceTokenizer
+from nltk.tag import pos_tag
+nltk.download('averaged_perceptron_tagger')
+
 
 # Globals
 FILENAME = []
@@ -48,11 +56,36 @@ def readFiles():
 
     for path,file in zip(PATH, FILENAME):
         story = Story(file)
+        para = []
 
         #Do Stuff to get data needed
         for line in open(path + file,"r"):
-            pass
+            type(line)
+            line = line.strip()
+            # sent_token = sent_tokenize(line)
+            para_tokenize = blankline_tokenize(line)
+            # line_tokenize = word_tokenize(line)
+            if not para_tokenize:
+                para = []
+            if para_tokenize:
+                para.extend(para_tokenize)
 
+
+            # line_tokenize = word_tokenize(line)
+            # if not line_tokenize:
+            #     para = []
+            # if line_tokenize:
+            #     para.extend(line_tokenize)
+
+            pass
+        para = ' '.join(para)
+        tagged_sent = pos_tag(para.split())
+        propernouns = [word for word,pos in tagged_sent if pos == 'NNP']
+
+        print(propernouns)
+
+
+        # print(para)
         #append story with data
         STORIES.append(story)
 
@@ -83,3 +116,52 @@ if (len(sys.argv)) == 2:
     
 else:
     print("Please include files in the command line")
+
+
+
+
+
+# # glove.6b.zip  bio tagging
+# import spaCy
+# import venv
+# import nltk
+# import word_tokenize
+# import blankline_tokenize # seperations be /n line or pragraphs
+# import bigrams, trigrams, ngrams
+# from nltk.stem import PorterStemmer/LancasterStemmer/SnowballStemmer
+# from nltk.stem import wordnet
+# from nltk.stem import WordNetLemmaizer
+# from nltk.corpus import stopwords
+# import re
+# sbst=SnowballStemmer('english')
+# pst=PorterStemmer()
+# # import nltk.corpus # just for using 
+# # Some functions down here
+# our_words = word_tokenize(sentence) 
+# for word in our_words:
+#     fdist[word.lower()]+=1 #frequency of words
+# fdist
+# fdist['<word wanted to be searched>']
+# fdist.most_common(10)
+# Sentence_bigrams = <list/set>(nltk.bigrams(sentence))
+# Sentence_ngrams = <list/set>(nltk.ngrams(sentence, 5))
+# # Stemming:
+# pst.stem("having")
+
+
+# #Lemmatization:
+
+# punctuation = compile(r'[-.?!,:;()|0-9]')
+# post_punctuation=[]
+# for words in Sentence:
+#     word = punctuation.sub("",words)
+#     if len(word)>0:
+#         post_punctuation.append(word)
+
+# for token in sent_tokens:
+#     print(nltk.pos_tag([token]))
+
+
+
+
+
