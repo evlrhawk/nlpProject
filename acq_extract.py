@@ -77,8 +77,6 @@ def readFiles():
         #Get Sentence Breakdown
         storyText = open(path + file,"r")
         SENTENCES.append(sent_tokenize(storyText.read()))
-        # story._sentences.clear()
-        # story._sentences.append(sent_tokenize(storyText.read()))
 
         for line in open(path + file,"r"):
             type(line)
@@ -140,15 +138,9 @@ def findPrice(sentenceList:list):
 
     newSentence = ""
 
-    # print(sentenceList, "\n")
     for sentence in sentenceList:
-        # print(sentence, "\n")
         idx = 0
-        print(sentence, "\n")
-        #newSentences = " ".join(sentence)
-        #print(newSentences, "\n")
         sent = word_tokenize(sentence)
-        #print(sent, "\n")
         for word in sent:
             if word.isdigit():
                 if sent[idx+1] and sent[idx+1] in QUANTITIES:
@@ -227,7 +219,6 @@ def findPrice(sentenceList:list):
             elif newSentence == "":
                 newSentence = "---"
             idx += 1
-    #print(newSentence, "\n")
     return newSentence
 
 # Driver Section
