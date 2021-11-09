@@ -1,14 +1,27 @@
 # Imports
-import os 
+import os
+from nltk.tokenize.regexp import RegexpTokenizer 
 import pandas as pd
 import sys
 import nltk
+import spacy
+import numpy as np
 from nltk.tokenize import sent_tokenize, word_tokenize
+from spacy.util import get_package_path
 nltk.download('punkt')
 from nltk.tokenize import blankline_tokenize
 from nltk.tokenize import WhitespaceTokenizer
 from nltk.tag import pos_tag
 nltk.download('averaged_perceptron_tagger')
+from nltk import ne_chunk
+nltk.download('maxent_ne_chunker')
+nltk.download('words')
+from nltk.corpus import stopwords
+# from nltk.probability import FreqDist   #Could be used to reduce our most frequent words like: "the, a, ',', '.', "
+# fdist = FreqDist()
+# fdist_top10 = fdist.most_common(10)
+# import re
+# punctuation = compile(r'[-.?!,:;()|0-9]')
 
 
 # Globals
@@ -88,23 +101,22 @@ def readFiles():
                 para = []
             if para_tokenize:
                 para.extend(para_tokenize)
-
-
             # line_tokenize = word_tokenize(line)
             # if not line_tokenize:
             #     para = []
             # if line_tokenize:
             #     para.extend(line_tokenize)
 
+
             pass
         para = ' '.join(para)
-        tagged_sent = pos_tag(para.split())
-        propernouns = [word for word,pos in tagged_sent if pos == 'NNP']
+        words_tagged = pos_tag(para.split())
+        chunked_tagged = ne_chunk(words_tagged)
+        # organizations = [word for word,pos in chunked_tagged if pos == 'NNP']
+        # print(chunked_tagged)
 
-        #print(propernouns)
 
-
-        # print(para)
+        
         #append story with data
         STORIES.append(story)
 
@@ -235,50 +247,6 @@ if (len(sys.argv)) == 2:
     
 else:
     print("Please include files in the command line")
-
-
-
-
-
-# # glove.6b.zip  bio tagging
-# import spaCy
-# import venv
-# import nltk
-# import word_tokenize
-# import blankline_tokenize # seperations be /n line or pragraphs
-# import bigrams, trigrams, ngrams
-# from nltk.stem import PorterStemmer/LancasterStemmer/SnowballStemmer
-# from nltk.stem import wordnet
-# from nltk.stem import WordNetLemmaizer
-# from nltk.corpus import stopwords
-# import re
-# sbst=SnowballStemmer('english')
-# pst=PorterStemmer()
-# # import nltk.corpus # just for using 
-# # Some functions down here
-# our_words = word_tokenize(sentence) 
-# for word in our_words:
-#     fdist[word.lower()]+=1 #frequency of words
-# fdist
-# fdist['<word wanted to be searched>']
-# fdist.most_common(10)
-# Sentence_bigrams = <list/set>(nltk.bigrams(sentence))
-# Sentence_ngrams = <list/set>(nltk.ngrams(sentence, 5))
-# # Stemming:
-# pst.stem("having")
-
-
-# #Lemmatization:
-
-# punctuation = compile(r'[-.?!,:;()|0-9]')
-# post_punctuation=[]
-# for words in Sentence:
-#     word = punctuation.sub("",words)
-#     if len(word)>0:
-#         post_punctuation.append(word)
-
-# for token in sent_tokens:
-#     print(nltk.pos_tag([token]))
 
 
 
