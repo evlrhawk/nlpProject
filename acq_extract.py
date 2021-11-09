@@ -12,11 +12,12 @@ nltk.download('averaged_perceptron_tagger')
 
 
 # Globals
-CURRENCIES = {"francs", "dlr", "dlrs", "DLRS", "lire", "yen"}
+CURRENCIES = {"francs", "dlr", "dlrs", "lire", "stg", "yen"}
 CURRENCY_ORIGIN = {"Belgian", "Canadian", "U.S."}
 CURRENCY_TYPE = {"cash"}
 NUMBERS = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"}
-QUANTITIES = {"billion", "mln", "MLN", "stg", "STG"}
+QUANTITIES = {"billion", "mln", "MLN"}
+
 UNDISCLOSED = {"disclose", "disclosed","undisclosed"}
 UNDISCLOSED_NEXT = {"amount", "of", "sum", "terms"}
 UNDISCLOSED_PREV = {"a", "almost","not", "been"}
@@ -35,6 +36,7 @@ class Story:
     _purchaser = "---"
     _seller = "---"
     _status = "---"
+    _sentences = []
 
     def __init__(self, text):#, acquired, acqbus, acqloc, dlramt, purhcaser, seller, status):
         self._text = text
@@ -61,6 +63,7 @@ def getFiles(docList:str):
 def readFiles():
     global FILENAME
     global PATH
+    global SENTENCES
     global STORIES
 
     for path,file in zip(PATH, FILENAME):
@@ -68,6 +71,14 @@ def readFiles():
         para = []
 
         #Do Stuff to get data needed
+
+        #Get Sentence Breakdown
+        storyText = open(path + file,"r")
+        newText = ""
+        #newText = storyText.read()
+        #newText = newText.replace("\n", " ")
+        story._sentences.append(sent_tokenize(storyText.read()))
+
         for line in open(path + file,"r"):
             type(line)
             line = line.strip()
@@ -91,7 +102,7 @@ def readFiles():
         tagged_sent = pos_tag(para.split())
         propernouns = [word for word,pos in tagged_sent if pos == 'NNP']
 
-        print(propernouns)
+        #print(propernouns)
 
 
         # print(para)
@@ -116,11 +127,111 @@ def writeData(docList:str):
 
         outFile.write("\n")
 
+def findPrice(sentenceList:list):
+    global CURRENCIES
+    global CURRENCY_ORIGIN
+    global CURRENCY_TYPE
+    global NUMBERS
+    global QUANTITIES
+    global UNDISCLOSED
+    global UNDISCLOSED_NEXT
+    global UNDISCLOSED_PREV
+
+    for sentence in sentenceList:
+        idx = 0
+        newSentence = " ".join(sentence)
+        sent = word_tokenize(newSentence)
+        for word in sent:
+            if word.isdigit():
+                if sent[idx+1] and sent[idx+1] in QUANTITIES:
+                    if sent[idx+2] and sent[idx+2] in CURRENCY_ORIGIN:
+                        if sent[idx+3] and sent[idx+3] in CURRENCIES:  
+                            if sent[idx+4] and sent[idx+4] in CURRENCY_TYPE:  
+                                newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3] + " " + sent[idx+4]
+                                return newSentence # NUM QUANT CurOr Cur CurTyp
+                            else:
+                                newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
+                                return newSentence # NUM QUANT CurOr Cur 
+                    elif sent[idx+2] and sent[idx+2] in CURRENCIES:
+                        if sent[idx+3] and sent[idx+3] in CURRENCY_TYPE:  
+                            newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
+                            return newSentence # NUM QUANT Cur CurTyp
+                        else:
+                            newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
+                            return newSentence # NUM QUANT Cur
+                elif sent[idx+1] and sent[idx+1] in CURRENCY_ORIGIN:
+                    if sent[idx+2] and sent[idx+2] in CURRENCIES:  
+                        if sent[idx+3] and sent[idx+3] in CURRENCY_TYPE:  
+                            newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
+                            return newSentence # NUM CurOr Cur CurTyp
+                        else:
+                            newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
+                            return newSentence # NUM CurOr Cur
+                elif sent[idx+1] and sent[idx+1] in CURRENCIES:
+                    if sent[idx+2] and sent[idx+2] in CURRENCY_TYPE:  
+                        newsent = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
+                        return newSentence # NUM Cur CurTyp
+                    else:
+                        newSentence = sent[idx] + " " + sent[idx+1] 
+                        return newSentence # NUM Cur 
+            elif word in NUMBERS:
+                if sent[idx+1] and sent[idx+1] in QUANTITIES:
+                    if sent[idx+2] and sent[idx+2] in CURRENCY_ORIGIN:
+                        if sent[idx+3] and sent[idx+3] in CURRENCIES:  
+                            if sent[idx+4] and sent[idx+4] in CURRENCY_TYPE:  
+                                newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3] + " " + sent[idx+4]
+                                return newSentence # NUM QUANT CurOr Cur CurTyp
+                            else:
+                                newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
+                                return newSentence # NUM QUANT CurOr Cur 
+                    elif sent[idx+2] and sent[idx+2] in CURRENCIES:
+                        if sent[idx+3] and sent[idx+3] in CURRENCY_TYPE:  
+                            newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
+                            return newSentence # NUM QUANT Cur CurTyp
+                        else:
+                            newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
+                            return newSentence # NUM QUANT Cur
+                elif sent[idx+1] and sent[idx+1] in CURRENCY_ORIGIN:
+                    if sent[idx+2] and sent[idx+2] in CURRENCIES:  
+                        if sent[idx+3] and sent[idx+3] in CURRENCY_TYPE:  
+                            newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
+                            return newSentence # NUM CurOr Cur CurTyp
+                        else:
+                            newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
+                            return newSentence # NUM CurOr Cur
+                elif sent[idx+1] and sent[idx+1] in CURRENCIES:
+                    if sent[idx+2] and sent[idx+2] in CURRENCY_TYPE:  
+                        newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
+                        return newSentence # NUM Cur CurTyp
+                    else:
+                        newSentence = sent[idx] + " " + sent[idx+1]
+                        return newSentence # NUM Cur
+            elif word in UNDISCLOSED:
+                if sent[idx-1] and sent[idx-1] in UNDISCLOSED_PREV:
+                    if sent[idx+1] and sent[idx+1] in UNDISCLOSED_NEXT:
+                        newSentence = sent[idx-1] + " " + sent[idx] + " " + sent[idx+1]
+                        return newSentence
+                    else:
+                        newSentence = sent[idx-1] + " " + sent[idx]
+                        return newSentence
+                elif sent[idx+1] and sent[idx+1] in UNDISCLOSED_NEXT:
+                    newSentence = sent[idx] + " " + sent[idx+1]
+                    return newSentence
+                else:
+                    return word
+            idx += 1
+
+
+    return "---"
 
 # Driver Section
 if (len(sys.argv)) == 2:
     getFiles(sys.argv[1])
     readFiles()
+
+    for story in STORIES:
+        story._dlramt = findPrice(story._sentences)
+
     writeData(sys.argv[1])
     
 else:
