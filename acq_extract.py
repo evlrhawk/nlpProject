@@ -230,7 +230,7 @@ if (len(sys.argv)) == 2:
     readFiles()
 
     for story in STORIES:
-        story._dlramt = findPrice(story._sentences)
+        story._dlramt = "\"" + findPrice(story._sentences) + "\""
 
     writeData(sys.argv[1])
     
