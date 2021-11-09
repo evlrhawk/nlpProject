@@ -24,6 +24,7 @@ UNDISCLOSED_PREV = {"a", "almost","not", "been"}
 
 FILENAME = []
 PATH = []
+SENTENCES = []
 STORIES = []
 
 # Classes
@@ -37,6 +38,7 @@ class Story:
     _seller = "---"
     _status = "---"
     _sentences = []
+    _content = ""
 
     def __init__(self, text):#, acquired, acqbus, acqloc, dlramt, purhcaser, seller, status):
         self._text = text
@@ -74,10 +76,9 @@ def readFiles():
 
         #Get Sentence Breakdown
         storyText = open(path + file,"r")
-        newText = ""
-        #newText = storyText.read()
-        #newText = newText.replace("\n", " ")
-        story._sentences.append(sent_tokenize(storyText.read()))
+        SENTENCES.append(sent_tokenize(storyText.read()))
+        # story._sentences.clear()
+        # story._sentences.append(sent_tokenize(storyText.read()))
 
         for line in open(path + file,"r"):
             type(line)
@@ -137,10 +138,17 @@ def findPrice(sentenceList:list):
     global UNDISCLOSED_NEXT
     global UNDISCLOSED_PREV
 
+    newSentence = ""
+
+    # print(sentenceList, "\n")
     for sentence in sentenceList:
+        # print(sentence, "\n")
         idx = 0
-        newSentence = " ".join(sentence)
-        sent = word_tokenize(newSentence)
+        print(sentence, "\n")
+        #newSentences = " ".join(sentence)
+        #print(newSentences, "\n")
+        sent = word_tokenize(sentence)
+        #print(sent, "\n")
         for word in sent:
             if word.isdigit():
                 if sent[idx+1] and sent[idx+1] in QUANTITIES:
@@ -148,89 +156,89 @@ def findPrice(sentenceList:list):
                         if sent[idx+3] and sent[idx+3] in CURRENCIES:  
                             if sent[idx+4] and sent[idx+4] in CURRENCY_TYPE:  
                                 newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3] + " " + sent[idx+4]
-                                return newSentence # NUM QUANT CurOr Cur CurTyp
+                                # NUM QUANT CurOr Cur CurTyp
                             else:
                                 newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
-                                return newSentence # NUM QUANT CurOr Cur 
+                                # NUM QUANT CurOr Cur 
                     elif sent[idx+2] and sent[idx+2] in CURRENCIES:
                         if sent[idx+3] and sent[idx+3] in CURRENCY_TYPE:  
                             newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
-                            return newSentence # NUM QUANT Cur CurTyp
+                            # NUM QUANT Cur CurTyp
                         else:
                             newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
-                            return newSentence # NUM QUANT Cur
+                            # NUM QUANT Cur
                 elif sent[idx+1] and sent[idx+1] in CURRENCY_ORIGIN:
                     if sent[idx+2] and sent[idx+2] in CURRENCIES:  
                         if sent[idx+3] and sent[idx+3] in CURRENCY_TYPE:  
                             newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
-                            return newSentence # NUM CurOr Cur CurTyp
+                            # NUM CurOr Cur CurTyp
                         else:
                             newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
-                            return newSentence # NUM CurOr Cur
+                            # NUM CurOr Cur
                 elif sent[idx+1] and sent[idx+1] in CURRENCIES:
                     if sent[idx+2] and sent[idx+2] in CURRENCY_TYPE:  
-                        newsent = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
-                        return newSentence # NUM Cur CurTyp
+                        newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
+                        # NUM Cur CurTyp
                     else:
                         newSentence = sent[idx] + " " + sent[idx+1] 
-                        return newSentence # NUM Cur 
+                        # NUM Cur 
             elif word in NUMBERS:
                 if sent[idx+1] and sent[idx+1] in QUANTITIES:
                     if sent[idx+2] and sent[idx+2] in CURRENCY_ORIGIN:
                         if sent[idx+3] and sent[idx+3] in CURRENCIES:  
                             if sent[idx+4] and sent[idx+4] in CURRENCY_TYPE:  
                                 newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3] + " " + sent[idx+4]
-                                return newSentence # NUM QUANT CurOr Cur CurTyp
+                                # NUM QUANT CurOr Cur CurTyp
                             else:
                                 newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
-                                return newSentence # NUM QUANT CurOr Cur 
+                                # NUM QUANT CurOr Cur 
                     elif sent[idx+2] and sent[idx+2] in CURRENCIES:
                         if sent[idx+3] and sent[idx+3] in CURRENCY_TYPE:  
                             newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
-                            return newSentence # NUM QUANT Cur CurTyp
+                            # NUM QUANT Cur CurTyp
                         else:
                             newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
-                            return newSentence # NUM QUANT Cur
+                            # NUM QUANT Cur
                 elif sent[idx+1] and sent[idx+1] in CURRENCY_ORIGIN:
                     if sent[idx+2] and sent[idx+2] in CURRENCIES:  
                         if sent[idx+3] and sent[idx+3] in CURRENCY_TYPE:  
                             newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
-                            return newSentence # NUM CurOr Cur CurTyp
+                            # NUM CurOr Cur CurTyp
                         else:
                             newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
-                            return newSentence # NUM CurOr Cur
+                            # NUM CurOr Cur
                 elif sent[idx+1] and sent[idx+1] in CURRENCIES:
                     if sent[idx+2] and sent[idx+2] in CURRENCY_TYPE:  
                         newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
-                        return newSentence # NUM Cur CurTyp
+                        # NUM Cur CurTyp
                     else:
                         newSentence = sent[idx] + " " + sent[idx+1]
-                        return newSentence # NUM Cur
+                        # NUM Cur
             elif word in UNDISCLOSED:
                 if sent[idx-1] and sent[idx-1] in UNDISCLOSED_PREV:
                     if sent[idx+1] and sent[idx+1] in UNDISCLOSED_NEXT:
                         newSentence = sent[idx-1] + " " + sent[idx] + " " + sent[idx+1]
-                        return newSentence
                     else:
                         newSentence = sent[idx-1] + " " + sent[idx]
-                        return newSentence
                 elif sent[idx+1] and sent[idx+1] in UNDISCLOSED_NEXT:
                     newSentence = sent[idx] + " " + sent[idx+1]
-                    return newSentence
                 else:
-                    return word
+                    newSentence = word
+            elif newSentence == "":
+                newSentence = "---"
             idx += 1
-
-
-    return "---"
+    #print(newSentence, "\n")
+    return newSentence
 
 # Driver Section
 if (len(sys.argv)) == 2:
     getFiles(sys.argv[1])
     readFiles()
 
-    for story in STORIES:
-        story._dlramt = "\"" + findPrice(story._sentences) + "\""
+    for story,sentence in zip(STORIES,SENTENCES):
+        story._dlramt = "\"" + findPrice(sentence) + "\""
+        if story._dlramt == "\"---\"":
+            story._dlramt = "---"
 
     writeData(sys.argv[1])
     

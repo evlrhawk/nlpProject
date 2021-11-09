@@ -2,7 +2,7 @@ TEXT: 10042
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -11,7 +11,7 @@ TEXT: 10066
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -29,7 +29,7 @@ TEXT: 10171
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -38,7 +38,7 @@ TEXT: 1029
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "20 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -47,7 +47,7 @@ TEXT: 1032
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -56,7 +56,7 @@ TEXT: 10348
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -65,7 +65,7 @@ TEXT: 10371
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -74,7 +74,7 @@ TEXT: 10473
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "527 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -83,7 +83,7 @@ TEXT: 10527
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "30 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -92,7 +92,7 @@ TEXT: 10541
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "100 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -101,7 +101,7 @@ TEXT: 10674
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "four dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -110,7 +110,7 @@ TEXT: 10694
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "244 mln stg"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -119,7 +119,7 @@ TEXT: 10714
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "151 mln stg"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -128,7 +128,7 @@ TEXT: 10721
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -137,7 +137,7 @@ TEXT: 10787
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -146,7 +146,7 @@ TEXT: 10816
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -155,7 +155,7 @@ TEXT: 10867
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -164,7 +164,7 @@ TEXT: 10872
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -173,7 +173,7 @@ TEXT: 10883
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -182,7 +182,7 @@ TEXT: 10899
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -191,7 +191,7 @@ TEXT: 10908
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -200,7 +200,7 @@ TEXT: 10928
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -209,7 +209,7 @@ TEXT: 10961
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -218,7 +218,7 @@ TEXT: 1099
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -227,7 +227,7 @@ TEXT: 10994
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "30 mln Canadian dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -236,7 +236,7 @@ TEXT: 11048
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -245,7 +245,7 @@ TEXT: 11051
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -254,7 +254,7 @@ TEXT: 11086
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -263,7 +263,7 @@ TEXT: 11113
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "84 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -272,7 +272,7 @@ TEXT: 11161
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "100 dlr"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -281,7 +281,7 @@ TEXT: 11192
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "10 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -290,7 +290,7 @@ TEXT: 11213
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "300 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -299,7 +299,7 @@ TEXT: 11237
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "985 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -308,7 +308,7 @@ TEXT: 11268
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -317,7 +317,7 @@ TEXT: 11362
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -326,7 +326,7 @@ TEXT: 11449
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "26 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -335,7 +335,7 @@ TEXT: 11468
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -344,7 +344,7 @@ TEXT: 11484
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed sum"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -353,7 +353,7 @@ TEXT: 11514
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -362,7 +362,7 @@ TEXT: 1153
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "seven dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -371,7 +371,7 @@ TEXT: 11579
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -380,7 +380,7 @@ TEXT: 1159
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "five dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -389,7 +389,7 @@ TEXT: 11722
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -398,7 +398,7 @@ TEXT: 11744
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -407,7 +407,7 @@ TEXT: 11854
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -416,7 +416,7 @@ TEXT: 11923
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "85 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -425,7 +425,7 @@ TEXT: 11968
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "100 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -434,7 +434,7 @@ TEXT: 11982
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -443,7 +443,7 @@ TEXT: 11996
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "one mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -452,7 +452,7 @@ TEXT: 12053
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -461,7 +461,7 @@ TEXT: 12068
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -470,7 +470,7 @@ TEXT: 12087
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -479,7 +479,7 @@ TEXT: 12093
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "231 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -488,7 +488,7 @@ TEXT: 12173
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -497,7 +497,7 @@ TEXT: 12191
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -506,7 +506,7 @@ TEXT: 12236
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -515,7 +515,7 @@ TEXT: 12344
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -524,7 +524,7 @@ TEXT: 12378
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "320 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -533,7 +533,7 @@ TEXT: 12386
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -542,7 +542,7 @@ TEXT: 12492
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -551,7 +551,7 @@ TEXT: 12504
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed amount"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -560,7 +560,7 @@ TEXT: 12512
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -569,7 +569,7 @@ TEXT: 12529
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -578,7 +578,7 @@ TEXT: 12532
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "33 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -587,7 +587,7 @@ TEXT: 12538
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -596,7 +596,7 @@ TEXT: 12646
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -605,7 +605,7 @@ TEXT: 12688
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -614,7 +614,7 @@ TEXT: 12751
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -623,7 +623,7 @@ TEXT: 12759
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "70 mln stg"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -632,7 +632,7 @@ TEXT: 12822
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "seven mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -641,7 +641,7 @@ TEXT: 12852
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "10 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -650,7 +650,7 @@ TEXT: 12858
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "100 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -659,7 +659,7 @@ TEXT: 1291
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -668,7 +668,7 @@ TEXT: 12937
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -677,7 +677,7 @@ TEXT: 12956
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -686,7 +686,7 @@ TEXT: 12974
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "175 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -695,7 +695,7 @@ TEXT: 12996
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -704,7 +704,7 @@ TEXT: 13036
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -713,7 +713,7 @@ TEXT: 13043
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -722,7 +722,7 @@ TEXT: 13077
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "110 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -731,7 +731,7 @@ TEXT: 13189
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "six dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -740,7 +740,7 @@ TEXT: 13196
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -749,7 +749,7 @@ TEXT: 13393
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "151 mln stg"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -758,7 +758,7 @@ TEXT: 134
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -767,7 +767,7 @@ TEXT: 13787
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -776,7 +776,7 @@ TEXT: 13874
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -785,7 +785,7 @@ TEXT: 14099
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -794,7 +794,7 @@ TEXT: 14131
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -803,7 +803,7 @@ TEXT: 14604
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -812,7 +812,7 @@ TEXT: 14619
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclose"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -821,7 +821,7 @@ TEXT: 14679
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "40 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -830,7 +830,7 @@ TEXT: 14888
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "150 mln dlr"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -839,7 +839,7 @@ TEXT: 14907
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -848,7 +848,7 @@ TEXT: 14949
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "25 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -857,7 +857,7 @@ TEXT: 15004
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -866,7 +866,7 @@ TEXT: 15024
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "70 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -875,7 +875,7 @@ TEXT: 15031
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -884,7 +884,7 @@ TEXT: 1506
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -893,7 +893,7 @@ TEXT: 15366
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "985 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -902,7 +902,7 @@ TEXT: 15404
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -911,7 +911,7 @@ TEXT: 15501
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -920,7 +920,7 @@ TEXT: 15561
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -929,7 +929,7 @@ TEXT: 15591
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "seven mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -938,7 +938,7 @@ TEXT: 1577
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "17 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -947,7 +947,7 @@ TEXT: 1584
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -956,7 +956,7 @@ TEXT: 15879
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "100 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -965,7 +965,7 @@ TEXT: 15918
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "13 mln dlrs cash"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -974,7 +974,7 @@ TEXT: 16007
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -983,7 +983,7 @@ TEXT: 16021
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -992,7 +992,7 @@ TEXT: 16029
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1001,7 +1001,7 @@ TEXT: 16037
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1010,7 +1010,7 @@ TEXT: 16152
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1019,7 +1019,7 @@ TEXT: 16176
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1028,7 +1028,7 @@ TEXT: 16233
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1037,7 +1037,7 @@ TEXT: 1626
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "350 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1046,7 +1046,7 @@ TEXT: 16379
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1055,7 +1055,7 @@ TEXT: 16398
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "46 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1064,7 +1064,7 @@ TEXT: 16419
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1073,7 +1073,7 @@ TEXT: 16443
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "720 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1082,7 +1082,7 @@ TEXT: 16483
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "two billion dlr"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1091,7 +1091,7 @@ TEXT: 16512
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "105 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1100,7 +1100,7 @@ TEXT: 16583
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1109,7 +1109,7 @@ TEXT: 1659
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1118,7 +1118,7 @@ TEXT: 16591
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "25 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1127,7 +1127,7 @@ TEXT: 16652
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1136,7 +1136,7 @@ TEXT: 16656
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "46 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1145,7 +1145,7 @@ TEXT: 1666
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "two mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1154,7 +1154,7 @@ TEXT: 16663
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "85 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1163,7 +1163,7 @@ TEXT: 16833
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "30 billion Canadian dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1172,7 +1172,7 @@ TEXT: 16872
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1181,7 +1181,7 @@ TEXT: 1694
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "seven dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1190,7 +1190,7 @@ TEXT: 16941
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1199,7 +1199,7 @@ TEXT: 17053
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "18 Canadian dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1208,7 +1208,7 @@ TEXT: 17151
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1217,7 +1217,7 @@ TEXT: 17168
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1226,7 +1226,7 @@ TEXT: 17178
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1235,7 +1235,7 @@ TEXT: 1729
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1244,7 +1244,7 @@ TEXT: 17317
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1253,7 +1253,7 @@ TEXT: 17323
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1262,7 +1262,7 @@ TEXT: 17333
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1271,7 +1271,7 @@ TEXT: 17488
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "35 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1280,7 +1280,7 @@ TEXT: 17518
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1289,7 +1289,7 @@ TEXT: 17576
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1298,7 +1298,7 @@ TEXT: 17651
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1307,7 +1307,7 @@ TEXT: 17659
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1316,7 +1316,7 @@ TEXT: 17688
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "18 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1325,7 +1325,7 @@ TEXT: 1771
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "65 dlrs cash"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1334,7 +1334,7 @@ TEXT: 17728
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1343,7 +1343,7 @@ TEXT: 17798
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed amount"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1352,7 +1352,7 @@ TEXT: 17837
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "76 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1361,7 +1361,7 @@ TEXT: 17847
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1370,7 +1370,7 @@ TEXT: 17876
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "649 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1379,7 +1379,7 @@ TEXT: 17907
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1388,7 +1388,7 @@ TEXT: 17913
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1397,7 +1397,7 @@ TEXT: 17973
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "nine mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1406,7 +1406,7 @@ TEXT: 17981
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1415,7 +1415,7 @@ TEXT: 17993
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "700 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1424,7 +1424,7 @@ TEXT: 1801
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclose"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1433,7 +1433,7 @@ TEXT: 18038
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "271 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1442,7 +1442,7 @@ TEXT: 18111
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1451,7 +1451,7 @@ TEXT: 18188
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "15 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1460,7 +1460,7 @@ TEXT: 18229
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1469,7 +1469,7 @@ TEXT: 1847
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "260 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1478,7 +1478,7 @@ TEXT: 18504
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1487,7 +1487,7 @@ TEXT: 18667
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "90 mln stg"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1496,7 +1496,7 @@ TEXT: 18682
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1505,7 +1505,7 @@ TEXT: 18783
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1514,7 +1514,7 @@ TEXT: 18861
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclose"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1523,7 +1523,7 @@ TEXT: 18921
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "190 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1532,7 +1532,7 @@ TEXT: 18963
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1541,7 +1541,7 @@ TEXT: 19006
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "75 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1550,7 +1550,7 @@ TEXT: 19042
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "10 billion yen"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1559,7 +1559,7 @@ TEXT: 19137
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1568,7 +1568,7 @@ TEXT: 19297
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1577,7 +1577,7 @@ TEXT: 19343
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1586,7 +1586,7 @@ TEXT: 19359
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "100 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1595,7 +1595,7 @@ TEXT: 19368
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1604,7 +1604,7 @@ TEXT: 19448
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1613,7 +1613,7 @@ TEXT: 19572
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "235 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1622,7 +1622,7 @@ TEXT: 19663
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "10 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1631,7 +1631,7 @@ TEXT: 19681
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "30 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1640,7 +1640,7 @@ TEXT: 19683
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "52 mln dlr"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1649,7 +1649,7 @@ TEXT: 19699
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1658,7 +1658,7 @@ TEXT: 19719
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1667,7 +1667,7 @@ TEXT: 19751
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "4 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1676,7 +1676,7 @@ TEXT: 19767
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "eight mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1685,7 +1685,7 @@ TEXT: 19912
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "nine dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1694,7 +1694,7 @@ TEXT: 19983
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "one billion dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1703,7 +1703,7 @@ TEXT: 2013
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1712,7 +1712,7 @@ TEXT: 20321
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "25 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1721,7 +1721,7 @@ TEXT: 20744
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "26 dlr"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1730,7 +1730,7 @@ TEXT: 20824
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "600 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1739,7 +1739,7 @@ TEXT: 20834
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1748,7 +1748,7 @@ TEXT: 2102
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1757,7 +1757,7 @@ TEXT: 21041
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1766,7 +1766,7 @@ TEXT: 21046
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1775,7 +1775,7 @@ TEXT: 21129
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "70 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1784,7 +1784,7 @@ TEXT: 21134
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1793,7 +1793,7 @@ TEXT: 21251
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "70 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1802,7 +1802,7 @@ TEXT: 2126
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1811,7 +1811,7 @@ TEXT: 21278
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "22 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1820,7 +1820,7 @@ TEXT: 21319
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "15 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1829,7 +1829,7 @@ TEXT: 21358
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "16 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1838,7 +1838,7 @@ TEXT: 21376
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "16 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1847,7 +1847,7 @@ TEXT: 21382
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "50 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1856,7 +1856,7 @@ TEXT: 21454
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "370 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1865,7 +1865,7 @@ TEXT: 21462
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "370 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1874,7 +1874,7 @@ TEXT: 21469
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1883,7 +1883,7 @@ TEXT: 2159
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1892,7 +1892,7 @@ TEXT: 2193
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1901,7 +1901,7 @@ TEXT: 2202
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1910,7 +1910,7 @@ TEXT: 2237
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "20 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1919,7 +1919,7 @@ TEXT: 2251
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "65 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1928,7 +1928,7 @@ TEXT: 2271
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "two mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1937,7 +1937,7 @@ TEXT: 2301
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1946,7 +1946,7 @@ TEXT: 2322
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1955,7 +1955,7 @@ TEXT: 2344
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1964,7 +1964,7 @@ TEXT: 2434
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed amount"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1973,7 +1973,7 @@ TEXT: 2532
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "been disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1982,7 +1982,7 @@ TEXT: 2546
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "52 dlr"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -1991,7 +1991,7 @@ TEXT: 2577
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2000,7 +2000,7 @@ TEXT: 2583
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "60 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2009,7 +2009,7 @@ TEXT: 2604
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2018,7 +2018,7 @@ TEXT: 2609
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2027,7 +2027,7 @@ TEXT: 2638
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "125 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2036,7 +2036,7 @@ TEXT: 2647
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2045,7 +2045,7 @@ TEXT: 2652
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2054,7 +2054,7 @@ TEXT: 2699
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "11 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2063,7 +2063,7 @@ TEXT: 2714
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2072,7 +2072,7 @@ TEXT: 2813
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2081,7 +2081,7 @@ TEXT: 2818
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "two mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2090,7 +2090,7 @@ TEXT: 2884
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2099,7 +2099,7 @@ TEXT: 2897
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2108,7 +2108,7 @@ TEXT: 2898
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2117,7 +2117,7 @@ TEXT: 2946
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2126,7 +2126,7 @@ TEXT: 2956
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2135,7 +2135,7 @@ TEXT: 3009
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2144,7 +2144,7 @@ TEXT: 3023
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "475 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2153,7 +2153,7 @@ TEXT: 304
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "one billion stg"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2162,7 +2162,7 @@ TEXT: 3168
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "500 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2171,7 +2171,7 @@ TEXT: 3198
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "four dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2180,7 +2180,7 @@ TEXT: 3229
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2189,7 +2189,7 @@ TEXT: 3241
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "200 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2198,7 +2198,7 @@ TEXT: 3251
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "12 mln Canadian dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2207,7 +2207,7 @@ TEXT: 3264
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2216,7 +2216,7 @@ TEXT: 3266
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "six mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2225,7 +2225,7 @@ TEXT: 3309
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2234,7 +2234,7 @@ TEXT: 3356
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "53 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2243,7 +2243,7 @@ TEXT: 3413
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2252,7 +2252,7 @@ TEXT: 3417
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2261,7 +2261,7 @@ TEXT: 3596
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "695 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2270,7 +2270,7 @@ TEXT: 3607
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "250 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2279,7 +2279,7 @@ TEXT: 3622
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2288,7 +2288,7 @@ TEXT: 3673
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "18 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2297,7 +2297,7 @@ TEXT: 369
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2306,7 +2306,7 @@ TEXT: 379
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "13 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2315,7 +2315,7 @@ TEXT: 3873
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "six dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2324,7 +2324,7 @@ TEXT: 389
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "12 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2333,7 +2333,7 @@ TEXT: 3961
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "eight dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2342,7 +2342,7 @@ TEXT: 3984
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "50 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2351,7 +2351,7 @@ TEXT: 4033
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "145 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2360,7 +2360,7 @@ TEXT: 4153
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "145 dlr"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2369,7 +2369,7 @@ TEXT: 4161
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2378,7 +2378,7 @@ TEXT: 4167
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "13 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2387,7 +2387,7 @@ TEXT: 4201
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "300 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2396,7 +2396,7 @@ TEXT: 4233
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclose"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2405,7 +2405,7 @@ TEXT: 4237
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2414,7 +2414,7 @@ TEXT: 4277
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2423,7 +2423,7 @@ TEXT: 4323
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2432,7 +2432,7 @@ TEXT: 4339
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2441,7 +2441,7 @@ TEXT: 4408
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2450,7 +2450,7 @@ TEXT: 447
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "299 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2459,7 +2459,7 @@ TEXT: 4493
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2468,7 +2468,7 @@ TEXT: 4536
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2477,7 +2477,7 @@ TEXT: 4537
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "46 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2486,7 +2486,7 @@ TEXT: 4622
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "400 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2495,7 +2495,7 @@ TEXT: 4623
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "110 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2504,7 +2504,7 @@ TEXT: 4659
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2513,7 +2513,7 @@ TEXT: 467
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2522,7 +2522,7 @@ TEXT: 4772
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "28 dlr"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2531,7 +2531,7 @@ TEXT: 4812
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2540,7 +2540,7 @@ TEXT: 4908
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "eight dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2549,7 +2549,7 @@ TEXT: 497
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "500 billion lire"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2558,7 +2558,7 @@ TEXT: 5094
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "100 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2567,7 +2567,7 @@ TEXT: 5097
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "300 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2576,7 +2576,7 @@ TEXT: 5112
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2585,7 +2585,7 @@ TEXT: 5121
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "135 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2594,7 +2594,7 @@ TEXT: 5286
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "50 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2603,7 +2603,7 @@ TEXT: 5287
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2612,7 +2612,7 @@ TEXT: 5293
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2621,7 +2621,7 @@ TEXT: 5299
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2630,7 +2630,7 @@ TEXT: 532
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "one mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2639,7 +2639,7 @@ TEXT: 5411
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "95 mln dlr"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2648,7 +2648,7 @@ TEXT: 547
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2657,7 +2657,7 @@ TEXT: 5477
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2666,7 +2666,7 @@ TEXT: 553
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "three mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2675,7 +2675,7 @@ TEXT: 5667
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2684,7 +2684,7 @@ TEXT: 5789
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed sum"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2693,7 +2693,7 @@ TEXT: 5854
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2702,7 +2702,7 @@ TEXT: 5934
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "28 mln U.S. dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2711,7 +2711,7 @@ TEXT: 5937
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2720,7 +2720,7 @@ TEXT: 5947
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2729,7 +2729,7 @@ TEXT: 6027
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "15 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2738,7 +2738,7 @@ TEXT: 6034
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2747,7 +2747,7 @@ TEXT: 6096
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2756,7 +2756,7 @@ TEXT: 6103
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2765,7 +2765,7 @@ TEXT: 6188
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2774,7 +2774,7 @@ TEXT: 6217
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "160 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2783,7 +2783,7 @@ TEXT: 6223
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2792,7 +2792,7 @@ TEXT: 6276
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "50 mln dlrs cash"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2801,7 +2801,7 @@ TEXT: 6361
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "82 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2810,7 +2810,7 @@ TEXT: 6373
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2819,7 +2819,7 @@ TEXT: 6402
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "384 mln dlr"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2828,7 +2828,7 @@ TEXT: 6422
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "500 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2837,7 +2837,7 @@ TEXT: 6441
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2846,7 +2846,7 @@ TEXT: 6477
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "nine mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2855,7 +2855,7 @@ TEXT: 6497
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "54 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2864,7 +2864,7 @@ TEXT: 6499
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "40 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2873,7 +2873,7 @@ TEXT: 6538
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed amount"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2882,7 +2882,7 @@ TEXT: 6616
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2891,7 +2891,7 @@ TEXT: 6659
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2900,7 +2900,7 @@ TEXT: 6689
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "23 billion dlr"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2909,7 +2909,7 @@ TEXT: 6694
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "one dlr"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2918,7 +2918,7 @@ TEXT: 6697
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2927,7 +2927,7 @@ TEXT: 6702
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2936,7 +2936,7 @@ TEXT: 6719
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2945,7 +2945,7 @@ TEXT: 6731
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2954,7 +2954,7 @@ TEXT: 6767
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2963,7 +2963,7 @@ TEXT: 6789
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "40 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2972,7 +2972,7 @@ TEXT: 6818
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2981,7 +2981,7 @@ TEXT: 6819
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "100 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2990,7 +2990,7 @@ TEXT: 6853
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "70 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -2999,7 +2999,7 @@ TEXT: 6856
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3008,7 +3008,7 @@ TEXT: 6873
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3017,7 +3017,7 @@ TEXT: 6886
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "350 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3026,7 +3026,7 @@ TEXT: 6928
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "one billion dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3035,7 +3035,7 @@ TEXT: 6961
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "351 mln yen"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3044,7 +3044,7 @@ TEXT: 7041
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "530 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3053,7 +3053,7 @@ TEXT: 706
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "53 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3062,7 +3062,7 @@ TEXT: 7136
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3071,7 +3071,7 @@ TEXT: 7149
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3080,7 +3080,7 @@ TEXT: 7433
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3089,7 +3089,7 @@ TEXT: 7469
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3098,7 +3098,7 @@ TEXT: 762
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3107,7 +3107,7 @@ TEXT: 7672
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3116,7 +3116,7 @@ TEXT: 768
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "three dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3125,7 +3125,7 @@ TEXT: 7693
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3134,7 +3134,7 @@ TEXT: 7729
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "15 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3143,7 +3143,7 @@ TEXT: 7796
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3152,7 +3152,7 @@ TEXT: 7964
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "one mln dlr"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3161,7 +3161,7 @@ TEXT: 7997
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "11 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3170,7 +3170,7 @@ TEXT: 8327
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3179,7 +3179,7 @@ TEXT: 8351
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3188,7 +3188,7 @@ TEXT: 8359
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3197,7 +3197,7 @@ TEXT: 8367
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3206,7 +3206,7 @@ TEXT: 8396
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3215,7 +3215,7 @@ TEXT: 8467
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3224,7 +3224,7 @@ TEXT: 8472
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3233,7 +3233,7 @@ TEXT: 8496
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "28 dlr"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3242,7 +3242,7 @@ TEXT: 8518
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "34 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3251,7 +3251,7 @@ TEXT: 8544
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "30 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3260,7 +3260,7 @@ TEXT: 8571
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3269,7 +3269,7 @@ TEXT: 8628
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "500 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3278,7 +3278,7 @@ TEXT: 8704
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "35 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3287,7 +3287,7 @@ TEXT: 8771
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3296,7 +3296,7 @@ TEXT: 8781
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3305,7 +3305,7 @@ TEXT: 8823
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3314,7 +3314,7 @@ TEXT: 8849
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3323,7 +3323,7 @@ TEXT: 8877
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3332,7 +3332,7 @@ TEXT: 8909
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3341,7 +3341,7 @@ TEXT: 8947
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3350,7 +3350,7 @@ TEXT: 8996
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3359,7 +3359,7 @@ TEXT: 8998
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "13 dlrs cash"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3368,7 +3368,7 @@ TEXT: 9027
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3377,7 +3377,7 @@ TEXT: 904
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "242 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3386,7 +3386,7 @@ TEXT: 9102
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "20 mln Canadian dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3395,7 +3395,7 @@ TEXT: 9108
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3404,7 +3404,7 @@ TEXT: 9156
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "600 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3413,7 +3413,7 @@ TEXT: 9239
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3422,7 +3422,7 @@ TEXT: 932
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "two mln stg"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3431,7 +3431,7 @@ TEXT: 9324
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3440,7 +3440,7 @@ TEXT: 9332
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3449,7 +3449,7 @@ TEXT: 9338
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3458,7 +3458,7 @@ TEXT: 9431
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3467,7 +3467,7 @@ TEXT: 9432
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "91 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3476,7 +3476,7 @@ TEXT: 9434
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3485,7 +3485,7 @@ TEXT: 9443
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "200 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3494,7 +3494,7 @@ TEXT: 9544
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3503,7 +3503,7 @@ TEXT: 9557
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3512,7 +3512,7 @@ TEXT: 963
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3521,7 +3521,7 @@ TEXT: 9661
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3530,7 +3530,7 @@ TEXT: 9677
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3539,7 +3539,7 @@ TEXT: 9733
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "15 dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3548,7 +3548,7 @@ TEXT: 9809
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3557,7 +3557,7 @@ TEXT: 982
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3566,7 +3566,7 @@ TEXT: 9858
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
@@ -3575,7 +3575,7 @@ TEXT: 9893
 ACQUIRED: ---
 ACQBUS: ---
 ACQLOC: ---
-DLRAMT: "83 mln dlrs"
+DLRAMT: "35 mln dlrs"
 PURCHASER: ---
 SELLER: ---
 STATUS: ---
