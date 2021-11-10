@@ -5,9 +5,15 @@ import pandas as pd
 import sys
 import nltk
 import spacy
+# python -m spacy download en_core_web_md
+
+from spacy import displacy  # use to see what is each word in our sentence is corresponding to
+nlp = spacy.load("en_core_web_md")
+
 import numpy as np
 from nltk.tokenize import sent_tokenize, word_tokenize
 from spacy.util import get_package_path
+from spacy.matcher import Matcher
 nltk.download('punkt')
 from nltk.tokenize import blankline_tokenize
 from nltk.tokenize import WhitespaceTokenizer
@@ -78,22 +84,58 @@ def readFiles():
             # sent_token = sent_tokenize(line)
             para_tokenize = blankline_tokenize(line)
             # line_tokenize = word_tokenize(line)
-            if not para_tokenize:
+            if not para_tokenize:   # Breaking up our paragraphs into a paragraph
                 para = []
             if para_tokenize:
                 para.extend(para_tokenize)
-            # line_tokenize = word_tokenize(line)
+            # line_tokenize = word_tokenize(line)  # Splitting up our paragraphs into single string lists
             # if not line_tokenize:
             #     para = []
             # if line_tokenize:
             #     para.extend(line_tokenize)
 
 
+
             pass
         para = ' '.join(para)
-        words_tagged = pos_tag(para.split())
-        chunked_tagged = ne_chunk(words_tagged)
-        # organizations = [word for word,pos in chunked_tagged if pos == 'NNP']
+        doc = nlp(para)
+        # print (doc)
+        for ent in doc.ents:
+            # print(ent.text, ent.label_)
+            pass
+        matcher = Matcher(nlp.vocab)
+        pattern = [{"POS": "PROPN", "OP": "+", "POS": "VERB"}]
+        # pattern = [{"POS": "NOUN"}, {"POS": "NOUN"}]
+        matcher.add ("PROPER_NOUNS", [pattern], greedy = "LONGEST")
+        matches = matcher(doc)
+        print(doc)
+        for match in matches:
+            print(match, doc[match[1]:match[2]])
+        # print(matches)
+        # print(nlp.vocab[matches[0][0]].text)
+
+
+
+
+
+        for token in doc:
+            # print (token.text, token.pos_, token.dep_)
+            pass
+        # visulize
+        # sentence_spans = list(doc.sents)    
+        # options = {"compact": True, "bg": "#09a3d5",
+        #     "color": "white", "font": "Source Sans Pro"}
+        # displacy.serve(sentence_spans, style="dep", options=options)
+        
+
+    
+
+        break
+
+
+        # words_tagged = pos_tag(para.split())
+        # chunked_tagged = ne_chunk(words_tagged)
+        # place = [word for word,pos in chunked_tagged if pos == 'GPE']
         # print(chunked_tagged)
 
 
