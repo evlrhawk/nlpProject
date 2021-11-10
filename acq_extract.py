@@ -30,10 +30,11 @@ CURRENCY_ORIGIN = {"Belgian", "Canadian", "U.S."}
 CURRENCY_TYPE = {"cash"}
 NUMBERS = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"}
 QUANTITIES = {"billion", "mln", "MLN"}
-
 UNDISCLOSED = {"disclose", "disclosed","undisclosed"}
 UNDISCLOSED_NEXT = {"amount", "of", "sum", "terms"}
 UNDISCLOSED_PREV = {"a", "almost","not", "been"}
+
+NER = spacy.load("en_core_web_trf")
 
 FILENAME = []
 PATH = []
@@ -130,7 +131,10 @@ def writeData(docList:str):
         print("TEXT:", story._text, file=outFile)
         print("ACQUIRED:", story._acquired, file=outFile)
         print("ACQBUS:", story._acqbus, file=outFile)
-        print("ACQLOC:", story._acqloc, file=outFile)
+        # ACQLOC
+        for locations in story._acqloc:
+            print("ACQLOC:", locations, file=outFile)
+        
         print("DLRAMT:", story._dlramt, file=outFile)
         print("PURCHASER:", story._purchaser, file=outFile)
         print("SELLER:", story._seller, file=outFile)
@@ -233,6 +237,24 @@ def findPrice(sentenceList:list):
             idx += 1
     return newSentence
 
+def findLoc(sentenceList:list):
+    global NER
+
+    acqLoc = []
+
+    for sentence in sentenceList:
+        doc = NER(sentence)
+        
+        for ent in doc.ents:
+            if ent.label_ == "GPE":
+                acqLoc.append("\"" + ent.text + "\"")
+
+    if not acqLoc:
+        acqLoc.append("---")
+        
+    return acqLoc
+
+
 # Driver Section
 if (len(sys.argv)) == 2:
     getFiles(sys.argv[1])
@@ -242,6 +264,9 @@ if (len(sys.argv)) == 2:
         story._dlramt = "\"" + findPrice(sentence) + "\""
         if story._dlramt == "\"---\"":
             story._dlramt = "---"
+
+    for story,sentence in zip(STORIES,SENTENCES):
+        story._acqloc = findLoc(sentence) 
 
     writeData(sys.argv[1])
     

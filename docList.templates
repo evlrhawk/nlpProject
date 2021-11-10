@@ -37,7 +37,8 @@ STATUS: ---
 TEXT: 1029
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Ottawa"
+ACQLOC: "Ottawa"
 DLRAMT: "20 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -55,7 +56,7 @@ STATUS: ---
 TEXT: 10348
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Hamburg"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -64,7 +65,8 @@ STATUS: ---
 TEXT: 10371
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Australia"
+ACQLOC: "Canada"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -73,7 +75,9 @@ STATUS: ---
 TEXT: 10473
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "France"
+ACQLOC: "Japan"
+ACQLOC: "U.S."
 DLRAMT: "527 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -82,7 +86,8 @@ STATUS: ---
 TEXT: 10527
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Woodward"
+ACQLOC: "Oklahoma"
 DLRAMT: "30 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -100,7 +105,7 @@ STATUS: ---
 TEXT: 10674
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Britain"
 DLRAMT: "four dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -127,7 +132,7 @@ STATUS: ---
 TEXT: 10721
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Sweden"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -136,7 +141,8 @@ STATUS: ---
 TEXT: 10787
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Portland"
+ACQLOC: "Maine"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -154,7 +160,13 @@ STATUS: ---
 TEXT: 10867
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Canada"
+ACQLOC: "the
+United States"
+ACQLOC: "Calgary"
+ACQLOC: "Montreal"
+ACQLOC: "the United States"
+ACQLOC: "Canada"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -181,7 +193,7 @@ STATUS: ---
 TEXT: 10899
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Seattle"
 DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
@@ -199,7 +211,7 @@ STATUS: ---
 TEXT: 10928
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New York"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -208,7 +220,9 @@ STATUS: ---
 TEXT: 10961
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Pompano Beach"
+ACQLOC: "Fla."
+ACQLOC: "Tampa"
 DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
@@ -217,7 +231,8 @@ STATUS: ---
 TEXT: 1099
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "South africa"
+ACQLOC: "the United States"
 DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
@@ -226,7 +241,7 @@ STATUS: ---
 TEXT: 10994
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Australia"
 DLRAMT: "30 mln Canadian dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -280,7 +295,9 @@ STATUS: ---
 TEXT: 11192
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Los Angeles"
+ACQLOC: "U.S."
+ACQLOC: "U.K."
 DLRAMT: "10 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -289,7 +306,18 @@ STATUS: ---
 TEXT: 11213
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Australia"
+ACQLOC: "Delhi"
+ACQLOC: "Delhi"
+ACQLOC: "Delhi"
+ACQLOC: "Australia"
+ACQLOC: "Sydney"
+ACQLOC: "Delhi"
+ACQLOC: "Australia"
+ACQLOC: "Delhi"
+ACQLOC: "Sydney"
+ACQLOC: "Delhi"
+ACQLOC: "Australia"
 DLRAMT: "300 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -316,7 +344,7 @@ STATUS: ---
 TEXT: 11362
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "U.S."
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -325,7 +353,8 @@ STATUS: ---
 TEXT: 11449
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "North Kingstown"
+ACQLOC: "R.I."
 DLRAMT: "26 dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -361,7 +390,7 @@ STATUS: ---
 TEXT: 1153
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Dallas"
 DLRAMT: "seven dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -370,7 +399,11 @@ STATUS: ---
 TEXT: 11579
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Naples"
+ACQLOC: "Fort Myers"
+ACQLOC: "Fla."
+ACQLOC: "Tampa"
+ACQLOC: "St. Petersburg"
 DLRAMT: "disclosed"
 PURCHASER: ---
 SELLER: ---
@@ -379,7 +412,7 @@ STATUS: ---
 TEXT: 1159
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Japan"
 DLRAMT: "five dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -406,7 +439,7 @@ STATUS: ---
 TEXT: 11854
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Porto"
 DLRAMT: "undisclosed"
 PURCHASER: ---
 SELLER: ---
@@ -433,7 +466,11 @@ STATUS: ---
 TEXT: 11982
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Mount
+Clemens"
+ACQLOC: "Mich."
+ACQLOC: "Clinton Township"
+ACQLOC: "Macomb County"
 DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
@@ -451,7 +488,9 @@ STATUS: ---
 TEXT: 12053
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New York"
+ACQLOC: "London"
+ACQLOC: "New York"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -460,7 +499,9 @@ STATUS: ---
 TEXT: 12068
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New York"
+ACQLOC: "London"
+ACQLOC: "New York"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -478,7 +519,8 @@ STATUS: ---
 TEXT: 12093
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Chicago"
+ACQLOC: "Melrose Park"
 DLRAMT: "231 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -487,7 +529,9 @@ STATUS: ---
 TEXT: 12173
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "West Virginia"
+ACQLOC: "West Va."
+ACQLOC: "Palisade"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -496,7 +540,8 @@ STATUS: ---
 TEXT: 12191
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Phoenix"
+ACQLOC: "Ariz."
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -505,7 +550,13 @@ STATUS: ---
 TEXT: 12236
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Brazil"
+ACQLOC: "Brazil"
+ACQLOC: "Gammara"
+ACQLOC: "Santo Antonio"
+ACQLOC: "Diamazon"
+ACQLOC: "Minas Gerais"
+ACQLOC: "Brazil"
 DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
@@ -514,7 +565,8 @@ STATUS: ---
 TEXT: 12344
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Oklahoma"
+ACQLOC: "Wyona"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -523,7 +575,7 @@ STATUS: ---
 TEXT: 12378
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "U.S."
 DLRAMT: "320 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -559,7 +611,9 @@ STATUS: ---
 TEXT: 12512
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Ohio"
+ACQLOC: "Henderson"
+ACQLOC: "Kentucky"
 DLRAMT: "undisclosed"
 PURCHASER: ---
 SELLER: ---
@@ -568,7 +622,9 @@ STATUS: ---
 TEXT: 12529
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Fort Myers"
+ACQLOC: "Sarasota"
+ACQLOC: "Fla."
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -604,7 +660,8 @@ STATUS: ---
 TEXT: 12688
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Monrovia"
+ACQLOC: "Calif."
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -622,7 +679,7 @@ STATUS: ---
 TEXT: 12759
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "London"
 DLRAMT: "70 mln stg"
 PURCHASER: ---
 SELLER: ---
@@ -631,7 +688,7 @@ STATUS: ---
 TEXT: 12822
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Denver"
 DLRAMT: "seven mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -658,7 +715,7 @@ STATUS: ---
 TEXT: 1291
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Chicago"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -667,7 +724,10 @@ STATUS: ---
 TEXT: 12937
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Minnesota"
+ACQLOC: "Wisconsin"
+ACQLOC: "Michigan"
+ACQLOC: "Illinois"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -694,7 +754,7 @@ STATUS: ---
 TEXT: 12996
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Chicago"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -721,7 +781,8 @@ STATUS: ---
 TEXT: 13077
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Secaucus"
+ACQLOC: "N.J."
 DLRAMT: "110 dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -730,7 +791,7 @@ STATUS: ---
 TEXT: 13189
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Chicago"
 DLRAMT: "six dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -739,7 +800,8 @@ STATUS: ---
 TEXT: 13196
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Buckhannon"
+ACQLOC: "W. Virginia"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -766,7 +828,7 @@ STATUS: ---
 TEXT: 13787
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Canada"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -784,7 +846,11 @@ STATUS: ---
 TEXT: 14099
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Wildwood"
+ACQLOC: "N.J."
+ACQLOC: "Ramapo"
+ACQLOC: "Warwick"
+ACQLOC: "N.Y."
 DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
@@ -793,7 +859,7 @@ STATUS: ---
 TEXT: 14131
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New York"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -802,7 +868,7 @@ STATUS: ---
 TEXT: 14604
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Delaware"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -820,7 +886,11 @@ STATUS: ---
 TEXT: 14679
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Santa Ana"
+ACQLOC: "Columbus"
+ACQLOC: "Oklahoma"
+ACQLOC: "Oklahoma"
+ACQLOC: "Oklahoma"
 DLRAMT: "40 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -829,7 +899,10 @@ STATUS: ---
 TEXT: 14888
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "the Philippines'"
+ACQLOC: "New York"
+ACQLOC: "Melbourne"
+ACQLOC: "Hong Kong"
 DLRAMT: "150 mln dlr"
 PURCHASER: ---
 SELLER: ---
@@ -838,7 +911,7 @@ STATUS: ---
 TEXT: 14907
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "London"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -865,7 +938,8 @@ STATUS: ---
 TEXT: 15024
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Salem"
+ACQLOC: "Ore."
 DLRAMT: "70 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -874,7 +948,23 @@ STATUS: ---
 TEXT: 15031
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Paramus"
+ACQLOC: "N.J."
+ACQLOC: "Wayne"
+ACQLOC: "N.J."
+ACQLOC: "Hackensack"
+ACQLOC: "N.J."
+ACQLOC: "National Park"
+ACQLOC: "N.J."
+ACQLOC: "Key West"
+ACQLOC: "Fla."
+ACQLOC: "Myrtle Beach"
+ACQLOC: "S.C."
+ACQLOC: "Houston"
+ACQLOC: "Louisville"
+ACQLOC: "Kent"
+ACQLOC: "Nashville"
+ACQLOC: "Tenn"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -883,7 +973,10 @@ STATUS: ---
 TEXT: 1506
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Oregon"
+ACQLOC: "Washington"
+ACQLOC: "Portland"
+ACQLOC: "Seattle"
 DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
@@ -892,7 +985,12 @@ STATUS: ---
 TEXT: 15366
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Delhi"
+ACQLOC: "Seram"
+ACQLOC: "Indonesia"
+ACQLOC: "Queensland"
+ACQLOC: "Hainan Island"
+ACQLOC: "China"
 DLRAMT: "985 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -919,7 +1017,8 @@ STATUS: ---
 TEXT: 15561
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Surfside Beach"
+ACQLOC: "S.C."
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -937,7 +1036,7 @@ STATUS: ---
 TEXT: 1577
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Chicago"
 DLRAMT: "17 dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -964,7 +1063,7 @@ STATUS: ---
 TEXT: 15918
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "California"
 DLRAMT: "13 mln dlrs cash"
 PURCHASER: ---
 SELLER: ---
@@ -973,7 +1072,7 @@ STATUS: ---
 TEXT: 16007
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Louisiana"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -991,7 +1090,10 @@ STATUS: ---
 TEXT: 16029
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New York"
+ACQLOC: "New York"
+ACQLOC: "Greenwood"
+ACQLOC: "S.C."
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1009,7 +1111,7 @@ STATUS: ---
 TEXT: 16152
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "U.K."
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1018,7 +1120,8 @@ STATUS: ---
 TEXT: 16176
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Canada"
+ACQLOC: "Canada"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1036,7 +1139,10 @@ STATUS: ---
 TEXT: 1626
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Salt Lake City"
+ACQLOC: "Utah"
+ACQLOC: "Idaho"
+ACQLOC: "Wyoming"
 DLRAMT: "350 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1045,7 +1151,8 @@ STATUS: ---
 TEXT: 16379
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Huron"
+ACQLOC: "South Dakota"
 DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
@@ -1054,7 +1161,7 @@ STATUS: ---
 TEXT: 16398
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Chicago"
 DLRAMT: "46 dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1081,7 +1188,9 @@ STATUS: ---
 TEXT: 16483
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Santa Barbara"
+ACQLOC: "Calif."
+ACQLOC: "Texas"
 DLRAMT: "two billion dlr"
 PURCHASER: ---
 SELLER: ---
@@ -1090,7 +1199,7 @@ STATUS: ---
 TEXT: 16512
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Los Angeles"
 DLRAMT: "105 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1126,7 +1235,8 @@ STATUS: ---
 TEXT: 16652
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Cincinnati"
+ACQLOC: "Cincinnati"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1144,7 +1254,10 @@ STATUS: ---
 TEXT: 1666
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Salem"
+ACQLOC: "Ore."
+ACQLOC: "Springfield"
+ACQLOC: "Va."
 DLRAMT: "two mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1153,7 +1266,8 @@ STATUS: ---
 TEXT: 16663
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Bensenville"
+ACQLOC: "Ill."
 DLRAMT: "85 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1162,7 +1276,10 @@ STATUS: ---
 TEXT: 16833
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Canada"
+ACQLOC: "Canada"
+ACQLOC: "Canada"
+ACQLOC: "Chicago"
 DLRAMT: "30 billion Canadian dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1171,7 +1288,8 @@ STATUS: ---
 TEXT: 16872
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Hong Kong"
+ACQLOC: "New Zealand"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1189,7 +1307,9 @@ STATUS: ---
 TEXT: 16941
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Nevada"
+ACQLOC: "Philadelphia"
+ACQLOC: "U.S."
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1225,7 +1345,7 @@ STATUS: ---
 TEXT: 17178
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New York"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1243,7 +1363,7 @@ STATUS: ---
 TEXT: 17317
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "United States"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1252,7 +1372,10 @@ STATUS: ---
 TEXT: 17323
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "West Germany's"
+ACQLOC: "U.S."
+ACQLOC: "Omaha"
+ACQLOC: "Nebraska"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1279,7 +1402,8 @@ STATUS: ---
 TEXT: 17518
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Delaware"
+ACQLOC: "Conneticut"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1288,7 +1412,7 @@ STATUS: ---
 TEXT: 17576
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New York"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1297,7 +1421,9 @@ STATUS: ---
 TEXT: 17651
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "West
+Chester"
+ACQLOC: "Pa."
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1306,7 +1432,7 @@ STATUS: ---
 TEXT: 17659
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Wisconsin"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1315,7 +1441,7 @@ STATUS: ---
 TEXT: 17688
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Toronto"
 DLRAMT: "18 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1333,7 +1459,8 @@ STATUS: ---
 TEXT: 17728
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Santa Clara"
+ACQLOC: "Calif."
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1351,7 +1478,8 @@ STATUS: ---
 TEXT: 17837
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New York"
+ACQLOC: "Burlington"
 DLRAMT: "76 dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1360,7 +1488,9 @@ STATUS: ---
 TEXT: 17847
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Florida"
+ACQLOC: "North Port"
+ACQLOC: "Sarasota"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1369,7 +1499,8 @@ STATUS: ---
 TEXT: 17876
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New Zealand"
+ACQLOC: "U.S."
 DLRAMT: "649 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1387,7 +1518,7 @@ STATUS: ---
 TEXT: 17913
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Queensland"
 DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
@@ -1405,7 +1536,9 @@ STATUS: ---
 TEXT: 17981
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Kansas"
+ACQLOC: "Columbia"
+ACQLOC: "Mo."
 DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
@@ -1414,7 +1547,8 @@ STATUS: ---
 TEXT: 17993
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Virginia"
+ACQLOC: "Virginia"
 DLRAMT: "700 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1423,7 +1557,8 @@ STATUS: ---
 TEXT: 1801
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Phoenix"
+ACQLOC: "Clayton"
 DLRAMT: "not disclose"
 PURCHASER: ---
 SELLER: ---
@@ -1432,7 +1567,8 @@ STATUS: ---
 TEXT: 18038
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Bloomington"
+ACQLOC: "Ind"
 DLRAMT: "271 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1450,7 +1586,8 @@ STATUS: ---
 TEXT: 18188
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "MacLean"
+ACQLOC: "Va."
 DLRAMT: "15 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1504,7 +1641,12 @@ STATUS: ---
 TEXT: 18783
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Syracuse"
+ACQLOC: "N.Y."
+ACQLOC: "Syracuse"
+ACQLOC: "Rochester"
+ACQLOC: "Buffalo"
+ACQLOC: "N.Y."
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1513,7 +1655,7 @@ STATUS: ---
 TEXT: 18861
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Dallas"
 DLRAMT: "not disclose"
 PURCHASER: ---
 SELLER: ---
@@ -1522,7 +1664,8 @@ STATUS: ---
 TEXT: 18921
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Memphis"
+ACQLOC: "Cookeville"
 DLRAMT: "190 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1531,7 +1674,7 @@ STATUS: ---
 TEXT: 18963
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "U.S."
 DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
@@ -1540,7 +1683,8 @@ STATUS: ---
 TEXT: 19006
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Japan"
+ACQLOC: "Japan"
 DLRAMT: "75 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1549,7 +1693,7 @@ STATUS: ---
 TEXT: 19042
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Japan"
 DLRAMT: "10 billion yen"
 PURCHASER: ---
 SELLER: ---
@@ -1576,7 +1720,8 @@ STATUS: ---
 TEXT: 19343
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Santa Monica"
+ACQLOC: "Calif."
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1594,7 +1739,7 @@ STATUS: ---
 TEXT: 19368
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Delaware"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1603,7 +1748,7 @@ STATUS: ---
 TEXT: 19448
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Boston"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1621,7 +1766,9 @@ STATUS: ---
 TEXT: 19663
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Schuykill
+County"
+ACQLOC: "Penn"
 DLRAMT: "10 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1639,7 +1786,9 @@ STATUS: ---
 TEXT: 19683
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Edison"
+ACQLOC: "N.J."
+ACQLOC: "Houston"
 DLRAMT: "52 mln dlr"
 PURCHASER: ---
 SELLER: ---
@@ -1648,7 +1797,7 @@ STATUS: ---
 TEXT: 19699
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Kentucky"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1666,7 +1815,9 @@ STATUS: ---
 TEXT: 19751
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Los Angeles"
+ACQLOC: "New York"
+ACQLOC: "New York"
 DLRAMT: "4 dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1675,7 +1826,7 @@ STATUS: ---
 TEXT: 19767
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "U.S."
 DLRAMT: "eight mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1684,7 +1835,7 @@ STATUS: ---
 TEXT: 19912
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "U.S.-based"
 DLRAMT: "nine dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1693,7 +1844,7 @@ STATUS: ---
 TEXT: 19983
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "U.S."
 DLRAMT: "one billion dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1774,7 +1925,8 @@ STATUS: ---
 TEXT: 21129
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Somerset"
+ACQLOC: "N.J."
 DLRAMT: "70 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1783,7 +1935,7 @@ STATUS: ---
 TEXT: 21134
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Ecuador"
 DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
@@ -1792,7 +1944,11 @@ STATUS: ---
 TEXT: 21251
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "U.S."
+ACQLOC: "U.S."
+ACQLOC: "U.S."
+ACQLOC: "U.S."
+ACQLOC: "U.S."
 DLRAMT: "70 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1801,7 +1957,12 @@ STATUS: ---
 TEXT: 2126
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Munich"
+ACQLOC: "West
+"
+ACQLOC: "Germany"
+ACQLOC: "Eden Prairie"
+ACQLOC: "Minn."
 DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
@@ -1810,7 +1971,7 @@ STATUS: ---
 TEXT: 21278
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Los Angeles"
 DLRAMT: "22 dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1819,7 +1980,10 @@ STATUS: ---
 TEXT: 21319
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Hong
+"
+ACQLOC: "Kong"
+ACQLOC: "U.S."
 DLRAMT: "15 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1828,7 +1992,11 @@ STATUS: ---
 TEXT: 21358
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Napa"
+ACQLOC: "Calif"
+ACQLOC: "Portland"
+ACQLOC: "U.S."
+ACQLOC: "Denver"
 DLRAMT: "16 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1855,7 +2023,8 @@ STATUS: ---
 TEXT: 21454
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Ravenna"
+ACQLOC: "Italy"
 DLRAMT: "370 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1864,7 +2033,8 @@ STATUS: ---
 TEXT: 21462
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Ravenna"
+ACQLOC: "Italy"
 DLRAMT: "370 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1891,7 +2061,8 @@ STATUS: ---
 TEXT: 2193
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Rigolleau"
+ACQLOC: "S.A."
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1900,7 +2071,10 @@ STATUS: ---
 TEXT: 2202
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Frankfurt"
+ACQLOC: "Spain"
+ACQLOC: "West Germany"
+ACQLOC: "Spain"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -1909,7 +2083,7 @@ STATUS: ---
 TEXT: 2237
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Philadelphia"
 DLRAMT: "20 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1918,7 +2092,8 @@ STATUS: ---
 TEXT: 2251
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Texas"
+ACQLOC: "Texas"
 DLRAMT: "65 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1927,7 +2102,7 @@ STATUS: ---
 TEXT: 2271
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "U.S."
 DLRAMT: "two mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -1963,7 +2138,8 @@ STATUS: ---
 TEXT: 2434
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Portland"
+ACQLOC: "Ore."
 DLRAMT: "undisclosed amount"
 PURCHASER: ---
 SELLER: ---
@@ -1999,7 +2175,8 @@ STATUS: ---
 TEXT: 2583
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Armonk"
+ACQLOC: "N.Y."
 DLRAMT: "60 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2044,7 +2221,7 @@ STATUS: ---
 TEXT: 2652
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Sweden"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -2080,7 +2257,7 @@ STATUS: ---
 TEXT: 2818
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Australia"
 DLRAMT: "two mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2098,7 +2275,7 @@ STATUS: ---
 TEXT: 2897
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Saskatchewan"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -2107,7 +2284,7 @@ STATUS: ---
 TEXT: 2898
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Philadelphia"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -2125,7 +2302,7 @@ STATUS: ---
 TEXT: 2956
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Malaysia"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -2134,7 +2311,8 @@ STATUS: ---
 TEXT: 3009
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Newport Beach"
+ACQLOC: "Washington"
 DLRAMT: "undisclosed"
 PURCHASER: ---
 SELLER: ---
@@ -2143,7 +2321,15 @@ STATUS: ---
 TEXT: 3023
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New York"
+ACQLOC: "Nevada"
+ACQLOC: "Pennsylvania"
+ACQLOC: "Atlantic City"
+ACQLOC: "N.J."
+ACQLOC: "New
+Jersey"
+ACQLOC: "Nevada"
+ACQLOC: "U.S."
 DLRAMT: "475 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2170,7 +2356,9 @@ STATUS: ---
 TEXT: 3198
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Bramalea"
+ACQLOC: "Ontario"
+ACQLOC: "Canada"
 DLRAMT: "four dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2179,7 +2367,7 @@ STATUS: ---
 TEXT: 3229
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Chicago"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -2197,7 +2385,8 @@ STATUS: ---
 TEXT: 3251
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "London"
+ACQLOC: "Britain"
 DLRAMT: "12 mln Canadian dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2224,7 +2413,11 @@ STATUS: ---
 TEXT: 3309
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Monterey Park"
+ACQLOC: "Calif."
+ACQLOC: "California"
+ACQLOC: "Arizona"
+ACQLOC: "Texas"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -2242,7 +2435,10 @@ STATUS: ---
 TEXT: 3413
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Cincinnati"
+ACQLOC: "Ohio"
+ACQLOC: "Fort Worth"
+ACQLOC: "Texas"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -2251,7 +2447,9 @@ STATUS: ---
 TEXT: 3417
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Bahamas"
+ACQLOC: "U.K."
+ACQLOC: "Bahamas"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -2269,7 +2467,9 @@ STATUS: ---
 TEXT: 3607
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "U.S."
+ACQLOC: "Montana City"
+ACQLOC: "California"
 DLRAMT: "250 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2287,7 +2487,8 @@ STATUS: ---
 TEXT: 3673
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New York"
+ACQLOC: "Connecticut"
 DLRAMT: "18 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2296,7 +2497,11 @@ STATUS: ---
 TEXT: 369
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Bluffton"
+ACQLOC: "Ohio"
+ACQLOC: "Hoffman
+Estates"
+ACQLOC: "Ill."
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -2305,7 +2510,7 @@ STATUS: ---
 TEXT: 379
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Chicago"
 DLRAMT: "13 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2323,7 +2528,8 @@ STATUS: ---
 TEXT: 389
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "U.S."
+ACQLOC: "U.S."
 DLRAMT: "12 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2341,7 +2547,8 @@ STATUS: ---
 TEXT: 3984
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "U.S."
+ACQLOC: "Singapore"
 DLRAMT: "50 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2368,7 +2575,8 @@ STATUS: ---
 TEXT: 4161
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Englewood"
+ACQLOC: "Colo."
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -2377,7 +2585,8 @@ STATUS: ---
 TEXT: 4167
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Princeville"
+ACQLOC: "U.S."
 DLRAMT: "13 dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2386,7 +2595,10 @@ STATUS: ---
 TEXT: 4201
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New York"
+ACQLOC: "Long
+Beach"
+ACQLOC: "California"
 DLRAMT: "300 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2395,7 +2607,7 @@ STATUS: ---
 TEXT: 4233
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Canada"
 DLRAMT: "not disclose"
 PURCHASER: ---
 SELLER: ---
@@ -2404,7 +2616,7 @@ STATUS: ---
 TEXT: 4237
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Boston"
 DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
@@ -2440,7 +2652,8 @@ STATUS: ---
 TEXT: 4408
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Umea"
+ACQLOC: "Sweden"
 DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
@@ -2449,7 +2662,9 @@ STATUS: ---
 TEXT: 447
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Atlantic City"
+ACQLOC: "New Jersey"
+ACQLOC: "Atlantic City"
 DLRAMT: "299 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2458,7 +2673,8 @@ STATUS: ---
 TEXT: 4493
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Malvern"
+ACQLOC: "Pa."
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -2485,7 +2701,11 @@ STATUS: ---
 TEXT: 4622
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Texas"
+ACQLOC: "California"
+ACQLOC: "San Antonio"
+ACQLOC: "Beaumont"
+ACQLOC: "Laredo"
 DLRAMT: "400 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2512,7 +2732,7 @@ STATUS: ---
 TEXT: 467
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Miami"
 DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
@@ -2521,7 +2741,8 @@ STATUS: ---
 TEXT: 4772
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New
+"
 DLRAMT: "28 dlr"
 PURCHASER: ---
 SELLER: ---
@@ -2530,7 +2751,8 @@ STATUS: ---
 TEXT: 4812
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Paterson"
+ACQLOC: "N.J."
 DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
@@ -2539,7 +2761,8 @@ STATUS: ---
 TEXT: 4908
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Belfast"
+ACQLOC: "Northern Ireland"
 DLRAMT: "eight dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2557,7 +2780,9 @@ STATUS: ---
 TEXT: 5094
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "California"
+ACQLOC: "Toronto"
+ACQLOC: "Los Angeles"
 DLRAMT: "100 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2566,7 +2791,9 @@ STATUS: ---
 TEXT: 5097
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New York"
+ACQLOC: "Long Beach"
+ACQLOC: "California"
 DLRAMT: "300 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2575,7 +2802,8 @@ STATUS: ---
 TEXT: 5112
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Gurnee"
+ACQLOC: "Ill."
 DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
@@ -2602,7 +2830,10 @@ STATUS: ---
 TEXT: 5287
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Seattle"
+ACQLOC: "Washington"
+ACQLOC: "Oak Harbour"
+ACQLOC: "Washington"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -2629,7 +2860,8 @@ STATUS: ---
 TEXT: 532
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Urbana"
+ACQLOC: "Md."
 DLRAMT: "one mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2683,7 +2915,12 @@ STATUS: ---
 TEXT: 5789
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Houston"
+ACQLOC: "Texas"
+ACQLOC: "Wellington"
+ACQLOC: "New Zealand"
+ACQLOC: "Houston"
+ACQLOC: "Houston"
 DLRAMT: "undisclosed sum"
 PURCHASER: ---
 SELLER: ---
@@ -2701,7 +2938,7 @@ STATUS: ---
 TEXT: 5934
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Canada"
 DLRAMT: "28 mln U.S. dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2746,7 +2983,7 @@ STATUS: ---
 TEXT: 6096
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "California"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -2755,7 +2992,9 @@ STATUS: ---
 TEXT: 6103
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New
+"
+ACQLOC: "York"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -2782,7 +3021,7 @@ STATUS: ---
 TEXT: 6223
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New York"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -2791,7 +3030,7 @@ STATUS: ---
 TEXT: 6276
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Memphis"
 DLRAMT: "50 mln dlrs cash"
 PURCHASER: ---
 SELLER: ---
@@ -2800,7 +3039,7 @@ STATUS: ---
 TEXT: 6361
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Singapore"
 DLRAMT: "82 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2818,7 +3057,7 @@ STATUS: ---
 TEXT: 6402
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "the U.S."
 DLRAMT: "384 mln dlr"
 PURCHASER: ---
 SELLER: ---
@@ -2845,7 +3084,8 @@ STATUS: ---
 TEXT: 6477
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Wawa"
+ACQLOC: "Ontario"
 DLRAMT: "nine mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2854,7 +3094,7 @@ STATUS: ---
 TEXT: 6497
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "U.S."
 DLRAMT: "54 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2881,7 +3121,10 @@ STATUS: ---
 TEXT: 6616
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Sunrise"
+ACQLOC: "Fla."
+ACQLOC: "Clearwater"
+ACQLOC: "Fla."
 DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
@@ -2899,7 +3142,8 @@ STATUS: ---
 TEXT: 6689
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Rhode Island's"
+ACQLOC: "Rhode Island"
 DLRAMT: "23 billion dlr"
 PURCHASER: ---
 SELLER: ---
@@ -2926,7 +3170,7 @@ STATUS: ---
 TEXT: 6702
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Dallas"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -2935,7 +3179,9 @@ STATUS: ---
 TEXT: 6719
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "U.S."
+ACQLOC: "U.S."
+ACQLOC: "Washington"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -2953,7 +3199,7 @@ STATUS: ---
 TEXT: 6767
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Houston"
 DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
@@ -2962,7 +3208,8 @@ STATUS: ---
 TEXT: 6789
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "U.K."
+ACQLOC: "U.S."
 DLRAMT: "40 dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -2971,7 +3218,8 @@ STATUS: ---
 TEXT: 6818
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Rockville Center"
+ACQLOC: "N.Y."
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -3016,7 +3264,7 @@ STATUS: ---
 TEXT: 6886
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Dallas"
 DLRAMT: "350 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -3025,7 +3273,10 @@ STATUS: ---
 TEXT: 6928
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New York"
+ACQLOC: "Los Angeles"
+ACQLOC: "Akron"
+ACQLOC: "Ohio"
 DLRAMT: "one billion dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -3034,7 +3285,10 @@ STATUS: ---
 TEXT: 6961
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Oporto"
+ACQLOC: "Portugal"
+ACQLOC: "Oporto"
+ACQLOC: "Portugal"
 DLRAMT: "351 mln yen"
 PURCHASER: ---
 SELLER: ---
@@ -3043,7 +3297,7 @@ STATUS: ---
 TEXT: 7041
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Japan"
 DLRAMT: "530 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -3052,7 +3306,7 @@ STATUS: ---
 TEXT: 706
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New York"
 DLRAMT: "53 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -3061,7 +3315,11 @@ STATUS: ---
 TEXT: 7136
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "U.K."
+ACQLOC: "South Africa"
+ACQLOC: "Namibia"
+ACQLOC: "South West
+Africa"
 DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
@@ -3070,7 +3328,8 @@ STATUS: ---
 TEXT: 7149
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Kendallville"
+ACQLOC: "Indiana"
 DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
@@ -3088,7 +3347,7 @@ STATUS: ---
 TEXT: 7469
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New York"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -3097,7 +3356,9 @@ STATUS: ---
 TEXT: 762
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Toronto"
+ACQLOC: "Edmonton"
+ACQLOC: "Alberta"
 DLRAMT: "undisclosed"
 PURCHASER: ---
 SELLER: ---
@@ -3106,7 +3367,9 @@ STATUS: ---
 TEXT: 7672
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Pendleton"
+ACQLOC: "Ore."
+ACQLOC: "Portland"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -3124,7 +3387,7 @@ STATUS: ---
 TEXT: 7693
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "United States"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -3142,7 +3405,10 @@ STATUS: ---
 TEXT: 7796
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New York"
+ACQLOC: "New York"
+ACQLOC: "Southfield"
+ACQLOC: "Michigan"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -3169,7 +3435,7 @@ STATUS: ---
 TEXT: 8327
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Dallas"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -3187,7 +3453,11 @@ STATUS: ---
 TEXT: 8359
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "U.S."
+ACQLOC: "Atlanta"
+ACQLOC: "Ga"
+ACQLOC: "Atlanta"
+ACQLOC: "Amsterdam"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -3196,7 +3466,8 @@ STATUS: ---
 TEXT: 8367
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Denver"
+ACQLOC: "Colo."
 DLRAMT: "not disclosed"
 PURCHASER: ---
 SELLER: ---
@@ -3223,7 +3494,8 @@ STATUS: ---
 TEXT: 8472
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Providence"
+ACQLOC: "R.I."
 DLRAMT: "disclosed"
 PURCHASER: ---
 SELLER: ---
@@ -3250,7 +3522,8 @@ STATUS: ---
 TEXT: 8544
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Bellevue"
+ACQLOC: "Wash."
 DLRAMT: "30 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -3268,7 +3541,13 @@ STATUS: ---
 TEXT: 8628
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Tokyo"
+ACQLOC: "U.S."
+ACQLOC: "Japan"
+ACQLOC: "London"
+ACQLOC: "Japan"
+ACQLOC: "Japan"
+ACQLOC: "Japan"
 DLRAMT: "500 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -3286,7 +3565,7 @@ STATUS: ---
 TEXT: 8771
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New York"
 DLRAMT: "disclosed"
 PURCHASER: ---
 SELLER: ---
@@ -3322,7 +3601,7 @@ STATUS: ---
 TEXT: 8877
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Alaska"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -3331,7 +3610,7 @@ STATUS: ---
 TEXT: 8909
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Swiss"
 DLRAMT: "undisclosed terms"
 PURCHASER: ---
 SELLER: ---
@@ -3358,7 +3637,9 @@ STATUS: ---
 TEXT: 8998
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "St. Louis"
+ACQLOC: "Jackson"
+ACQLOC: "Mich.-based"
 DLRAMT: "13 dlrs cash"
 PURCHASER: ---
 SELLER: ---
@@ -3367,7 +3648,7 @@ STATUS: ---
 TEXT: 9027
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Montreal"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -3376,7 +3657,7 @@ STATUS: ---
 TEXT: 904
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Ohio"
 DLRAMT: "242 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -3385,7 +3666,7 @@ STATUS: ---
 TEXT: 9102
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Los Angeles"
 DLRAMT: "20 mln Canadian dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -3403,7 +3684,8 @@ STATUS: ---
 TEXT: 9156
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Brussels"
+ACQLOC: "New York"
 DLRAMT: "600 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -3421,7 +3703,8 @@ STATUS: ---
 TEXT: 932
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Amsterdam"
+ACQLOC: "UK"
 DLRAMT: "two mln stg"
 PURCHASER: ---
 SELLER: ---
@@ -3466,7 +3749,11 @@ STATUS: ---
 TEXT: 9432
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Ontario"
+ACQLOC: "Mississauga"
+ACQLOC: "Ontario"
+ACQLOC: "U.S."
+ACQLOC: "Canada"
 DLRAMT: "91 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -3475,7 +3762,9 @@ STATUS: ---
 TEXT: 9434
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Colorado"
+ACQLOC: "Colorado"
+ACQLOC: "Denver"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -3484,7 +3773,14 @@ STATUS: ---
 TEXT: 9443
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "West Germany"
+ACQLOC: "Eschborn"
+ACQLOC: "West Germany"
+ACQLOC: "the United States"
+ACQLOC: "West
+"
+ACQLOC: "Germany"
+ACQLOC: "the United Kingdom"
 DLRAMT: "200 mln dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -3493,7 +3789,9 @@ STATUS: ---
 TEXT: 9544
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Hong Kong"
+ACQLOC: "U.S."
+ACQLOC: "U.S."
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -3511,7 +3809,7 @@ STATUS: ---
 TEXT: 963
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "U.S."
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
@@ -3538,7 +3836,10 @@ STATUS: ---
 TEXT: 9733
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "New York"
+ACQLOC: "U.S."
+ACQLOC: "Alaska"
+ACQLOC: "U.S."
 DLRAMT: "15 dlrs"
 PURCHASER: ---
 SELLER: ---
@@ -3556,7 +3857,8 @@ STATUS: ---
 TEXT: 982
 ACQUIRED: ---
 ACQBUS: ---
-ACQLOC: ---
+ACQLOC: "Dublin"
+ACQLOC: "London"
 DLRAMT: ---
 PURCHASER: ---
 SELLER: ---
