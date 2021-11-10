@@ -1,28 +1,29 @@
 # Imports
-import os
-from nltk.tokenize.regexp import RegexpTokenizer 
 import pandas as pd
 import sys
 import nltk
 import spacy
-# python -m spacy download en_core_web_md
-
-from spacy import displacy  # use to see what is each word in our sentence is corresponding to
-nlp = spacy.load("en_core_web_md")
 import numpy as np
+# python -m spacy download en_core_web_md
+from nltk.tokenize.regexp import RegexpTokenizer 
+from spacy import displacy  # use to see what is each word in our sentence is corresponding to
 from nltk.tokenize import sent_tokenize, word_tokenize
 from spacy.util import get_package_path
 from spacy.matcher import Matcher
-nltk.download('punkt')
 from nltk.tokenize import blankline_tokenize
 from nltk.tokenize import WhitespaceTokenizer
 from nltk.tag import pos_tag
-nltk.download('averaged_perceptron_tagger')
 from nltk import ne_chunk
+from nltk.corpus import stopwords
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
 nltk.download('maxent_ne_chunker')
 nltk.download('words')
 from nltk.corpus import stopwords
-nltk.download('stop_words')
+#nltk.download('stop_words')
+
+nlp = spacy.load("en_core_web_md")
+NER = spacy.load("en_core_web_trf")
 
 # Globals
 CURRENCIES = {"francs", "dlr", "dlrs", "lire", "stg", "yen"}
@@ -34,8 +35,6 @@ UNDISCLOSED = {"disclose", "disclosed","undisclosed"}
 UNDISCLOSED_NEXT = {"amount", "of", "sum", "terms"}
 UNDISCLOSED_PREV = {"a", "almost","not", "been"}
 
-NER = spacy.load("en_core_web_trf")
-
 FILENAME = []
 PATH = []
 SENTENCES = []
@@ -44,12 +43,12 @@ STORIES = []
 # Classes
 class Story:
     _text = "---"
-    _acquired = "---"
+    _acquired = []
     _acqbus = "---"
     _acqloc = "---"
     _dlramt = "---"
-    _purchaser = "---"
-    _seller = "---"
+    _purchaser = []
+    _seller = []
     _status = "---"
     _sentences = []
     _content = ""
@@ -100,15 +99,13 @@ def readFiles():
                 para = []
             if para_tokenize:
                 para.extend(para_tokenize)
-            pass
+            
         para = ' '.join(para)
         doc = nlp(para)
         story._purchaser = findPurchaser(doc)
         story._acquired = findAcquired(doc)
         story._seller = findSeller(doc)
 
-
-        break
         #append story with data
         STORIES.append(story)
     return docs
@@ -123,7 +120,10 @@ def findPurchaser(doc):
     matches.sort(key = lambda x: x[1])
     for match in matches:
         purchasers.append(doc[match[1]:match[2]])
-    purchaser = purchasers[0]
+    if purchasers:
+        purchaser = purchasers[0]
+    else:
+        purchaser = "---"    
     return purchaser
 
 def findAcquired(doc):
@@ -137,6 +137,8 @@ def findAcquired(doc):
         acquireds.append(doc[match[1]:match[2]])
     if len(acquireds) > 2:
         acquired = (acquireds[1])     
+    else:
+        acquired = "---"
     return acquired
 
 def findSeller(doc):
@@ -151,7 +153,7 @@ def findSeller(doc):
     if len(sellers) > 3:
         seller = (sellers[2])   
     else:
-        seller = "..."  
+        seller = "---"  
     return seller
 
 
@@ -163,17 +165,25 @@ def writeData(docList:str):
     
     for story in STORIES:
         print("TEXT: ", story._text, file=outFile)
-        for organizations in story._acquired:
-            print("ACQUIRED: ", organizations, file=outFile)
+        if str(story._acquired) == "---":
+            print("ACQUIRED: ", story._acquired, file=outFile)    
+        else:
+            print("ACQUIRED: ", "\"" + str(story._acquired) + "\"", file=outFile)
         print("ACQBUS: ", story._acqbus, file=outFile)
         for locations in story._acqloc:
             print("ACQLOC:", locations, file=outFile)
         print("DLRAMT: ", story._dlramt, file=outFile)
-        for organizations in story._purchaser:
-            print("PURCHASER: ", organizations, file=outFile)
-        for organizations in story._seller:
-            print("SELLER: ", organizations, file=outFile)
+        if str(story._acquired) == "---":
+            print("ACQUIRED: ", story._purchaser, file=outFile)    
+        else:
+            print("PURCHASER: ", "\"" + str(story._purchaser) + "\"", file=outFile) 
+        if str(story._acquired) == "---":
+            print("ACQUIRED: ", story._seller, file=outFile)    
+        else:
+            print("SELLER: ", "---", file=outFile)
         print("STATUS: ", story._status, file=outFile)
+
+        #"\"" + str(story._seller) + "\""
 
         outFile.write("\n")
 
