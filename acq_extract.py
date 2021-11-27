@@ -88,64 +88,74 @@ def readFiles():
                 para.extend(para_tokenize)
             pass
         para = ' '.join(para)
+        
+
+        # #MACHINE LEARNING
+        # nlp = spacy.blank("en")
+        # # ner = nlp.create_pipe("ner")
+        # # nlp.add_pipe("ner", last=True)
+        # # ner = nlp.get_pipe("ner")
+        # if i <= 5:
+        #     j = 0
+        #     while j < 7:
+        #         ent_list = ["ACQUIRED", "ACQBUS", "ACQLOC", "DLRAMT", "PURCHASER", "SELLER", "STATUS"]
+        #         TRAIN_DATA = [(para, {"entities": [str(ans_list_list[i][j]), str(ent_list[j])]}),]
+        #         db = DocBin()
+        #         for text, annotations in TRAIN_DATA:
+        #             # ner.add_label(annotations[2])
+        #         # return nlp
+        #             doc = nlp.make_doc(text)
+        #             # ents = []
+        #             # span = (annotations[0],annotations[1])
+        #             # ents.append(annotations)
+        #             # for word, label in annotations["entities"]:
+        #             #     span = 
+        #             #     ents.append(span)
+        #             # print (annotations)
+        #             # doc.ents = annotations
+        #             db.add(doc)
+        #         db.to_disk("./train.spacy")  
+        #         j = j +1
 
 
-        #MACHINE LEARNING
-        nlp = spacy.blank("en")
-        ner = nlp.create_pipe("ner")
-        nlp.add_pipe("ner", last=True)
-        ner = nlp.get_pipe("ner")
-        if i <= 5:
-            j = 0
-            while j < 7:
-                ent_list = ["ACQUIRED", "ACQBUS", "ACQLOC", "DLRAMT", "PURCHASER", "SELLER", "STATUS"]
-                TRAIN_DATA = [(para, {"entities": [str(ans_list_list[i][j]), str(ent_list[j])]}),]
-                db = DocBin()
-                for text, annotations in TRAIN_DATA:
-
-                    # ner.add_label(annotations[2])
-
-                # return nlp
-                    doc = nlp(text)
-                    db.add(doc)
-                db.to_disk("./train.spacy")  
-                j = j +1
-
-
-        doc = nlp(para)
-        if i > 5:
-            for ent in doc:
-                print(ent.text, ent.label_)  # what label corresponds to the text
-                pass
+        # # doc = nlp(para)
+        # # if i > 5:
+        # #     for ent in doc:
+        # #         print(ent.text, ent.label_)  # what label corresponds to the text
+        # #         pass
 
 
 
 
     #PATTERNS
 
-        # doc = nlp(para)
+        doc = nlp(para)
         # story._purchaser = findPurchaser(doc)
-        # story._acquired = findAcquired(doc)
+        story._acquired = findAcquired(doc)
         # story._seller = findSeller(doc)
 
 
         #append story with data
         STORIES.append(story)
-        i = i+1
+        # i = i+1
     return
 
 
 def findPurchaser(doc):
     purchasers = []
+    aquisition_lemmas = ["sale", "buy", "purchase", "acquire", "get", "obtain", "take", "secure", "gain", "procure", "trade"]
     purchase = []
     matcher = Matcher(nlp.vocab)
     pattern = [{"POS": "PROPN", "OP": "+"}] 
+    # pattern = [{"POS": "PROPN", "OP": "+"}, ]
     matcher.add ("PURCHASERS", [pattern], greedy = "LONGEST")
     matches = matcher(doc)
     matches.sort(key = lambda x: x[1])
     for match in matches:
         purchasers.append(doc[match[1]:match[2]])
+    print (purchasers[0])
     purchaser = purchasers[0]
+
     return purchaser
 
 
@@ -165,6 +175,7 @@ def findAcquired(doc):
         acquireds.append(doc[match[1]:match[2]])
     if len(acquireds) > 2:
         acquired = (acquireds[1])     
+        print(acquired)
     return acquired
 
 def findSeller(doc):
@@ -210,10 +221,8 @@ def writeData(docList:str):
 def getFiles_ans(anslist:str):
     global FILENAME_ans
     global PATH_ans
-    # print(anslist)
     for line in open(anslist, "r"):
         newLine = line.strip()
-        # print(newLine)
         path_ans, file_ans = newLine.rsplit("/",1)
         path_ans += "/"
         PATH_ans.append(path_ans)
@@ -255,7 +264,7 @@ def readFiles_ans():
 if (len(sys.argv)) == 3:
     getFiles_ans(sys.argv[1])
     getFiles(sys.argv[2])
-    readFiles_ans()
+    # readFiles_ans()
     readFiles()
     writeData(sys.argv[2])
     
