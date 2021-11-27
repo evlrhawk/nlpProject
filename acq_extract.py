@@ -26,13 +26,14 @@ nlp = spacy.load("en_core_web_md")
 NER = spacy.load("en_core_web_trf")
 
 # Globals
-CURRENCIES = {"francs", "dlr", "dlrs", "lire", "stg", "yen"}
-CURRENCY_ORIGIN = {"Belgian", "Canadian", "U.S."}
+CURRENCIES = {"francs", "dlr", "dlrs", "lire", "pesos", "stg", "yen"}
+CURRENCY_ORIGIN = {"Belgian", "Canadian", "N.Z", "U.S."}
 CURRENCY_TYPE = {"cash"}
+KILL_WORDS = {"sales", "prices", "profits", "share", "more than", "not less than", "opposed"}#, "shares", "bid"}
 NUMBERS = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"}
-QUANTITIES = {"billion", "mln", "MLN"}
+QUANTITIES = {"billion", "Billion", "bln", "BLN", "million", "Million", "mln", "MLN"}
 UNDISCLOSED = {"disclose", "disclosed","undisclosed"}
-UNDISCLOSED_NEXT = {"amount", "of", "sum", "terms"}
+UNDISCLOSED_NEXT = {"amount", "of", "sum"} #, "terms"}
 UNDISCLOSED_PREV = {"a", "almost","not", "been"}
 
 FILENAME = []
@@ -64,6 +65,11 @@ class Story:
         # self._status = status
 
 # Methods
+def isNumber(n:str):
+    if n.isdigit() or n.replace(".", "").isdigit():
+        return True
+    return False
+
 def getFiles(docList:str):
     global FILENAME
     global PATH
@@ -102,9 +108,12 @@ def readFiles():
             
         para = ' '.join(para)
         doc = nlp(para)
-        story._purchaser = findPurchaser(doc)
-        story._acquired = findAcquired(doc)
-        story._seller = findSeller(doc)
+        # story._purchaser = findPurchaser(doc)
+        # story._acquired = findAcquired(doc)
+        # story._seller = findSeller(doc)
+        story._purchaser = "---"
+        story._acquired = "---"
+        story._seller = "---"
 
         #append story with data
         STORIES.append(story)
@@ -191,6 +200,7 @@ def findPrice(sentenceList:list):
     global CURRENCIES
     global CURRENCY_ORIGIN
     global CURRENCY_TYPE
+    global KILL_WORDS
     global NUMBERS
     global QUANTITIES
     global UNDISCLOSED
@@ -202,84 +212,88 @@ def findPrice(sentenceList:list):
     for sentence in sentenceList:
         idx = 0
         sent = word_tokenize(sentence)
-        for word in sent:
-            if word.isdigit():
-                if sent[idx+1] and sent[idx+1] in QUANTITIES:
-                    if sent[idx+2] and sent[idx+2] in CURRENCY_ORIGIN:
-                        if sent[idx+3] and sent[idx+3] in CURRENCIES:  
-                            if sent[idx+4] and sent[idx+4] in CURRENCY_TYPE:  
-                                newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3] + " " + sent[idx+4]
-                                # NUM QUANT CurOr Cur CurTyp
-                            else:
+        kill = any(item in KILL_WORDS for item in sent)
+        
+        if not kill:
+            for word in sent:
+                if isNumber(word):
+                    if sent[idx+1] and sent[idx+1] in QUANTITIES:
+                        if sent[idx+2] and sent[idx+2] in CURRENCY_ORIGIN:
+                            if sent[idx+3] and sent[idx+3] in CURRENCIES:  
+                                if sent[idx+4] and sent[idx+4] in CURRENCY_TYPE:  
+                                    newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3] + " " + sent[idx+4]
+                                    # NUM QUANT CurOr Cur CurTyp
+                                else:
+                                    newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
+                                    # NUM QUANT CurOr Cur 
+                        elif sent[idx+2] and sent[idx+2] in CURRENCIES:
+                            if sent[idx+3] and sent[idx+3] in CURRENCY_TYPE:  
                                 newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
-                                # NUM QUANT CurOr Cur 
-                    elif sent[idx+2] and sent[idx+2] in CURRENCIES:
-                        if sent[idx+3] and sent[idx+3] in CURRENCY_TYPE:  
-                            newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
-                            # NUM QUANT Cur CurTyp
-                        else:
-                            newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
-                            # NUM QUANT Cur
-                elif sent[idx+1] and sent[idx+1] in CURRENCY_ORIGIN:
-                    if sent[idx+2] and sent[idx+2] in CURRENCIES:  
-                        if sent[idx+3] and sent[idx+3] in CURRENCY_TYPE:  
-                            newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
-                            # NUM CurOr Cur CurTyp
-                        else:
-                            newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
-                            # NUM CurOr Cur
-                elif sent[idx+1] and sent[idx+1] in CURRENCIES:
-                    if sent[idx+2] and sent[idx+2] in CURRENCY_TYPE:  
-                        newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
-                        # NUM Cur CurTyp
-                    else:
-                        newSentence = sent[idx] + " " + sent[idx+1] 
-                        # NUM Cur 
-            elif word in NUMBERS:
-                if sent[idx+1] and sent[idx+1] in QUANTITIES:
-                    if sent[idx+2] and sent[idx+2] in CURRENCY_ORIGIN:
-                        if sent[idx+3] and sent[idx+3] in CURRENCIES:  
-                            if sent[idx+4] and sent[idx+4] in CURRENCY_TYPE:  
-                                newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3] + " " + sent[idx+4]
-                                # NUM QUANT CurOr Cur CurTyp
+                                # NUM QUANT Cur CurTyp
                             else:
+                                newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
+                                # NUM QUANT Cur
+                    elif sent[idx+1] and sent[idx+1] in CURRENCY_ORIGIN:
+                        if sent[idx+2] and sent[idx+2] in CURRENCIES:  
+                            if sent[idx+3] and sent[idx+3] in CURRENCY_TYPE:  
                                 newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
-                                # NUM QUANT CurOr Cur 
-                    elif sent[idx+2] and sent[idx+2] in CURRENCIES:
-                        if sent[idx+3] and sent[idx+3] in CURRENCY_TYPE:  
-                            newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
-                            # NUM QUANT Cur CurTyp
-                        else:
+                                # NUM CurOr Cur CurTyp
+                            else:
+                                newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
+                                # NUM CurOr Cur
+                    elif sent[idx+1] and sent[idx+1] in CURRENCIES:
+                        if sent[idx+2] and sent[idx+2] in CURRENCY_TYPE:  
                             newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
-                            # NUM QUANT Cur
-                elif sent[idx+1] and sent[idx+1] in CURRENCY_ORIGIN:
-                    if sent[idx+2] and sent[idx+2] in CURRENCIES:  
-                        if sent[idx+3] and sent[idx+3] in CURRENCY_TYPE:  
-                            newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
-                            # NUM CurOr Cur CurTyp
+                            # NUM Cur CurTyp
                         else:
+                            newSentence = sent[idx] + " " + sent[idx+1] 
+                            # NUM Cur 
+                elif word in NUMBERS:
+                    if sent[idx+1] and sent[idx+1] in QUANTITIES:
+                        if sent[idx+2] and sent[idx+2] in CURRENCY_ORIGIN:
+                            if sent[idx+3] and sent[idx+3] in CURRENCIES:  
+                                if sent[idx+4] and sent[idx+4] in CURRENCY_TYPE:  
+                                    newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3] + " " + sent[idx+4]
+                                    # NUM QUANT CurOr Cur CurTyp
+                                else:
+                                    newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
+                                    # NUM QUANT CurOr Cur 
+                        elif sent[idx+2] and sent[idx+2] in CURRENCIES:
+                            if sent[idx+3] and sent[idx+3] in CURRENCY_TYPE:  
+                                newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
+                                # NUM QUANT Cur CurTyp
+                            else:
+                                newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
+                                # NUM QUANT Cur
+                    elif sent[idx+1] and sent[idx+1] in CURRENCY_ORIGIN:
+                        if sent[idx+2] and sent[idx+2] in CURRENCIES:  
+                            if sent[idx+3] and sent[idx+3] in CURRENCY_TYPE:  
+                                newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
+                                # NUM CurOr Cur CurTyp
+                            else:
+                                newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
+                                # NUM CurOr Cur
+                    elif sent[idx+1] and sent[idx+1] in CURRENCIES:
+                        if sent[idx+2] and sent[idx+2] in CURRENCY_TYPE:  
                             newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
-                            # NUM CurOr Cur
-                elif sent[idx+1] and sent[idx+1] in CURRENCIES:
-                    if sent[idx+2] and sent[idx+2] in CURRENCY_TYPE:  
-                        newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
-                        # NUM Cur CurTyp
-                    else:
+                            # NUM Cur CurTyp
+                        else:
+                            newSentence = sent[idx] + " " + sent[idx+1]
+                            # NUM Cur
+                elif word in UNDISCLOSED:
+                    if sent[idx-1] and sent[idx-1] in UNDISCLOSED_PREV:
+                        if sent[idx+1] and sent[idx+1] in UNDISCLOSED_NEXT:
+                            newSentence = sent[idx-1] + " " + sent[idx] + " " + sent[idx+1]
+                        else:
+                            newSentence = sent[idx-1] + " " + sent[idx]
+                    elif sent[idx+1] and sent[idx+1] in UNDISCLOSED_NEXT:
                         newSentence = sent[idx] + " " + sent[idx+1]
-                        # NUM Cur
-            elif word in UNDISCLOSED:
-                if sent[idx-1] and sent[idx-1] in UNDISCLOSED_PREV:
-                    if sent[idx+1] and sent[idx+1] in UNDISCLOSED_NEXT:
-                        newSentence = sent[idx-1] + " " + sent[idx] + " " + sent[idx+1]
                     else:
-                        newSentence = sent[idx-1] + " " + sent[idx]
-                elif sent[idx+1] and sent[idx+1] in UNDISCLOSED_NEXT:
-                    newSentence = sent[idx] + " " + sent[idx+1]
-                else:
-                    newSentence = word
-            elif newSentence == "":
-                newSentence = "---"
-            idx += 1
+                        newSentence = word
+                elif newSentence == "":
+                    newSentence = "---"
+                idx += 1
+
     return newSentence
 
 def findLoc(sentenceList:list):
@@ -289,10 +303,19 @@ def findLoc(sentenceList:list):
 
     for sentence in sentenceList:
         doc = NER(sentence)
-        
+        idx = 0
+        skip = False 
+        location = ""
+
         for ent in doc.ents:
-            if ent.label_ == "GPE":
-                acqLoc.append("\"" + ent.text + "\"")
+            if skip:
+                skip = False
+            elif ent.label_ == "GPE":
+                location = "\"" + ent.text + "\"" 
+            
+            if location not in acqLoc:
+                acqLoc.append(location)
+            idx += 1
 
     if not acqLoc:
         acqLoc.append("---")
