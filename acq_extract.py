@@ -13,16 +13,16 @@ import numpy as np
 from nltk.tokenize import sent_tokenize, word_tokenize
 from spacy.util import get_package_path
 from spacy.matcher import Matcher
-nltk.download('punkt')
+# nltk.download('punkt')
 from nltk.tokenize import blankline_tokenize
 from nltk.tokenize import WhitespaceTokenizer
 from nltk.tag import pos_tag
-nltk.download('averaged_perceptron_tagger')
+# nltk.download('averaged_perceptron_tagger')
 from nltk import ne_chunk
-nltk.download('maxent_ne_chunker')
-nltk.download('words')
+# nltk.download('maxent_ne_chunker')
+# nltk.download('words')
 from nltk.corpus import stopwords
-nltk.download('stop_words')
+# nltk.download('stop_words')
 from spacy.training import Corpus
 
 # Globals
@@ -124,17 +124,12 @@ def readFiles():
         # #         print(ent.text, ent.label_)  # what label corresponds to the text
         # #         pass
 
-
-
-
     #PATTERNS
 
         doc = nlp(para)
-        # story._purchaser = findPurchaser(doc)
+        story._purchaser = findPurchaser(doc)
         story._acquired = findAcquired(doc)
-        # story._seller = findSeller(doc)
-
-
+        story._seller = findSeller1(doc)
         #append story with data
         STORIES.append(story)
         # i = i+1
@@ -144,18 +139,32 @@ def readFiles():
 def findPurchaser(doc):
     purchasers = []
     aquisition_lemmas = ["sale", "buy", "purchase", "acquire", "get", "obtain", "take", "secure", "gain", "procure", "trade"]
-    purchase = []
     matcher = Matcher(nlp.vocab)
-    pattern = [{"POS": "PROPN", "OP": "+"}] 
-    # pattern = [{"POS": "PROPN", "OP": "+"}, ]
-    matcher.add ("PURCHASERS", [pattern], greedy = "LONGEST")
+    pattern = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": aquisition_lemmas}, "OP": "*"}, {"LEMMA": {"IN": aquisition_lemmas}}
+]
+    matcher.add ("PURCHASER_SENT", [pattern], greedy = "LONGEST")
     matches = matcher(doc)
     matches.sort(key = lambda x: x[1])
     for match in matches:
         purchasers.append(doc[match[1]:match[2]])
-    print (purchasers[0])
-    purchaser = purchasers[0]
-
+    if purchasers:
+        purchaser = purchasers[0]
+    else:
+        purchaser = "---"
+    doc2 = nlp(str(purchaser)) 
+    purchasers = []
+    matcher = Matcher(nlp.vocab)
+    pattern = [{"ENT_TYPE": "ORG", "OP": "+"}] 
+    matcher.add ("PURCHASER", [pattern], greedy = "LONGEST")
+    matches = matcher(doc)
+    matches.sort(key = lambda x: x[1])
+    for match in matches:
+        purchasers.append(doc2[match[1]:match[2]])
+    if purchasers:
+        purchaser = purchasers[0]   
+    else:
+        purchaser = "---" 
+    print (purchaser) 
     return purchaser
 
 
@@ -168,32 +177,45 @@ def findAcquired(doc):
     # pattern = [{"LEMMA": {"IN": ["sale", "buy", "purchase", "acquire", "get", "obtain", "take", "secure", "gain", "procure", "trade"]}}]
     # pattern = [{"ENT_TYPE": "ORG"}]
     # pattern = [{{"POS": "PROPN", "OP": "+"}, {"-"}, {"POS": "PROPN", "OP": "+"}}]
-    matcher.add ("PURCHASERS", [pattern], greedy = "LONGEST")
+    matcher.add ("ACQUIRED", [pattern], greedy = "LONGEST")
     matches = matcher(doc)
     matches.sort(key = lambda x: x[1])
     for match in matches:
         acquireds.append(doc[match[1]:match[2]])
     if len(acquireds) > 2:
         acquired = (acquireds[1])     
-        print(acquired)
+    else:
+        acquired = "---"
+
     return acquired
 
-def findSeller(doc):
+def findSeller1(doc):
     sellers = []
     matcher = Matcher(nlp.vocab)
-    pattern = [{"POS": "PROPN", "OP": "+"}] 
+    pattern = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": [ "offer", "sale", "transaction"]}, "OP": "*"}, {"LEMMA": {"IN": [ "offer", "sale", "transaction"]}}] 
     # pattern = [{"LEMMA": {"IN": ["sale", "buy", "purchase", "acquire", "get", "obtain", "take", "secure", "gain", "procure", "trade"]}}]
-    # pattern = [{"ENT_TYPE": "ORG"}]
-    # pattern = [{{"POS": "PROPN", "OP": "+"}, {"-"}, {"POS": "PROPN", "OP": "+"}}]
-    matcher.add ("PURCHASERS", [pattern], greedy = "LONGEST")
+    matcher.add ("SELLER_SENT", [pattern], greedy = "LONGEST")
     matches = matcher(doc)
     matches.sort(key = lambda x: x[1])
     for match in matches:
         sellers.append(doc[match[1]:match[2]])
-    if len(sellers) > 3:
-        seller = (sellers[2])   
+    if sellers:
+        seller = sellers[0]   
     else:
-        seller = "..."  
+        seller = "---" 
+    doc2 = nlp(str(seller)) 
+    sellers = []
+    matcher = Matcher(nlp.vocab)
+    pattern = [{"POS": "PROPN", "OP": "+"}] 
+    matcher.add ("SELLER", [pattern], greedy = "LONGEST")
+    matches = matcher(doc)
+    matches.sort(key = lambda x: x[1])
+    for match in matches:
+        sellers.append(doc2[match[1]:match[2]])
+    if sellers:
+        seller = sellers[0]   
+    else:
+        seller = "---" 
     return seller
 
 
@@ -264,7 +286,7 @@ def readFiles_ans():
 if (len(sys.argv)) == 3:
     getFiles_ans(sys.argv[1])
     getFiles(sys.argv[2])
-    # readFiles_ans()
+    readFiles_ans()
     readFiles()
     writeData(sys.argv[2])
     
