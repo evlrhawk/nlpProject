@@ -20,6 +20,7 @@ nltk.download('averaged_perceptron_tagger')
 nltk.download('maxent_ne_chunker')
 nltk.download('words')
 from nltk.corpus import stopwords
+from thinc.types import Fal
 #nltk.download('stop_words')
 
 nlp = spacy.load("en_core_web_md")
@@ -108,12 +109,12 @@ def readFiles():
             
         para = ' '.join(para)
         doc = nlp(para)
-        # story._purchaser = findPurchaser(doc)
-        # story._acquired = findAcquired(doc)
-        # story._seller = findSeller(doc)
-        story._purchaser = "---"
-        story._acquired = "---"
-        story._seller = "---"
+        story._purchaser = findPurchaser(doc)
+        story._acquired = findAcquired(doc)
+        story._seller = findSeller(doc)
+        # story._purchaser = "---"
+        # story._acquired = "---"
+        # story._seller = "---"
 
         #append story with data
         STORIES.append(story)
@@ -174,22 +175,29 @@ def writeData(docList:str):
     
     for story in STORIES:
         print("TEXT: ", story._text, file=outFile)
+        
         if str(story._acquired) == "---":
             print("ACQUIRED: ", story._acquired, file=outFile)    
         else:
             print("ACQUIRED: ", "\"" + str(story._acquired) + "\"", file=outFile)
+        
         print("ACQBUS: ", story._acqbus, file=outFile)
+        
         for locations in story._acqloc:
             print("ACQLOC:", locations, file=outFile)
+        
         print("DLRAMT: ", story._dlramt, file=outFile)
+        
         if str(story._acquired) == "---":
-            print("ACQUIRED: ", story._purchaser, file=outFile)    
+            print("PURCHASER: ", story._purchaser, file=outFile)    
         else:
             print("PURCHASER: ", "\"" + str(story._purchaser) + "\"", file=outFile) 
+        
         if str(story._acquired) == "---":
-            print("ACQUIRED: ", story._seller, file=outFile)    
+            print("SELLER: ", story._seller, file=outFile)    
         else:
             print("SELLER: ", "---", file=outFile)
+        
         print("STATUS: ", story._status, file=outFile)
 
         #"\"" + str(story._seller) + "\""
@@ -300,10 +308,14 @@ def findLoc(sentenceList:list):
     global NER
 
     acqLoc = []
+    locations = []
+
+    sent = str(sentenceList)
+    newSent = sent_tokenize(sent)
 
     for sentence in sentenceList:
         doc = NER(sentence)
-        idx = 0
+        found = False
         skip = False 
         location = ""
 
@@ -311,17 +323,60 @@ def findLoc(sentenceList:list):
             if skip:
                 skip = False
             elif ent.label_ == "GPE":
-                location = "\"" + ent.text + "\"" 
-            
-            if location not in acqLoc:
-                acqLoc.append(location)
-            idx += 1
+                location = "\"" + ent.text + "\""
+                #skip = True
+            # elif ent.label_ == "GPE":
+            #     location = "\"" + ent.text + "\"" 
+            if location not in locations:
+                locations.append(location)
 
-    if not acqLoc:
-        acqLoc.append("---")
-        
-    return acqLoc
+    acqLoc.clear()
+    #Filter list of possible locations
+    _skip = False
+    for loc in locations:
+        #print (loc)
+        if _skip:
+            _skip = False
+        else:
+            for sentence in newSent:
+                sentence = sentence.replace("\\n", " ")
+                idx = 0
+                # if loc.strip() in sentence.strip():
+                #print(loc, "\n")
+                words = word_tokenize(sentence)
+                for word in words:
+                    num_words = loc.split()
+                    #print(num_words, "\n")
+                    if len(num_words) == 1:
+                        if word in loc:
+                            # if idx >= 1:    
+                            #     if "of" in words[idx-1]:
+                            #         found = True
+                            #         pass # We dont want this one
+                            if idx < len(num_words):
+                                if "," in words[idx+1]:
+                                    data = word + ", " + words[idx+2]
+                                    data = data.replace("\\n", " ")
+                                    data = data.replace("\\", " ")
+                                    acqLoc.append(data)
+                                    _skip = True
+                                    found = True
+                    idx += 1
+                    if found:
+                        break
+                if found:
+                    break
+        if not found:
+            acqLoc.append(loc)
+        else: 
+            found = False
 
+    if len(acqLoc) > 1:
+        return acqLoc[1:]
+    elif acqLoc[0] == "":
+        return ["---"]
+    else:
+        return acqLoc
 
 
 
@@ -331,12 +386,14 @@ if (len(sys.argv)) == 2:
     readFiles()
 
     for story,sentence in zip(STORIES,SENTENCES):
+        #story._dlramt = "---"
         story._dlramt = "\"" + findPrice(sentence) + "\""
         if story._dlramt == "\"---\"":
             story._dlramt = "---"
 
     for story,sentence in zip(STORIES,SENTENCES):
         story._acqloc = findLoc(sentence) 
+        print(story._acqloc)
 
     writeData(sys.argv[1])
     
