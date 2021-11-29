@@ -129,7 +129,10 @@ def readFiles():
         doc = nlp(para)
         story._purchaser = findPurchaser(doc)
         story._acquired = findAcquired(doc)
-        story._seller = findSeller1(doc)
+        story._seller = findSeller(doc)
+        story._acqloc = location(doc)
+        # story._acqbus = findacqbus(doc)
+        story._status = findStatus(doc)
         #append story with data
         STORIES.append(story)
         # i = i+1
@@ -138,11 +141,21 @@ def readFiles():
 
 def findPurchaser(doc):
     purchasers = []
-    aquisition_lemmas = ["sale", "buy", "purchase", "acquire", "get", "obtain", "take", "secure", "gain", "procure", "trade"]
+    aquisition_lemmas = ["buy", "purchase", "acquire", "get", "obtain", "take", "secure", "gain", "procure", "trade"]
     matcher = Matcher(nlp.vocab)
-    pattern = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": aquisition_lemmas}, "OP": "*"}, {"LEMMA": {"IN": aquisition_lemmas}}
-]
-    matcher.add ("PURCHASER_SENT", [pattern], greedy = "LONGEST")
+    pattern = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": aquisition_lemmas}, "OP": "*"}, {"LEMMA": {"IN": aquisition_lemmas}}]
+    pattern1 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": aquisition_lemmas}, "OP": "*"}, {"LEMMA": {"IN": aquisition_lemmas}}]
+    pattern2 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"LEMMA": {"NOT_IN": aquisition_lemmas}, "OP": "*"}, {"LEMMA": {"IN": aquisition_lemmas}}]
+    pattern3 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": aquisition_lemmas}, "OP": "*"}, {"LEMMA": {"IN": aquisition_lemmas}}]
+    pattern4 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": aquisition_lemmas}, "OP": "*"}, {"LEMMA": {"IN": aquisition_lemmas}}]
+    # pattern1 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"LEMMA": {"IN": aquisition_lemmas}}]    
+    # pattern2 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"IN": aquisition_lemmas}}]
+    # pattern3 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"IN": aquisition_lemmas}}]
+    # pattern4 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"IN": aquisition_lemmas}}]
+    # pattern5 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"IN": aquisition_lemmas}}]
+    # pattern6 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"IN": aquisition_lemmas}}]
+    pattern5 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ORTH": "said" }]
+    matcher.add ("PURCHASER_SENT", [pattern5, pattern, pattern4, pattern1, pattern2, pattern3], greedy = "LONGEST")
     matches = matcher(doc)
     matches.sort(key = lambda x: x[1])
     for match in matches:
@@ -156,7 +169,7 @@ def findPurchaser(doc):
     matcher = Matcher(nlp.vocab)
     pattern = [{"ENT_TYPE": "ORG", "OP": "+"}] 
     matcher.add ("PURCHASER", [pattern], greedy = "LONGEST")
-    matches = matcher(doc)
+    matches = matcher(doc2)
     matches.sort(key = lambda x: x[1])
     for match in matches:
         purchasers.append(doc2[match[1]:match[2]])
@@ -164,20 +177,37 @@ def findPurchaser(doc):
         purchaser = purchasers[0]   
     else:
         purchaser = "---" 
-    print (purchaser) 
+    # print (purchaser) 
     return purchaser
 
-
+def findStatus(doc):
+    statuses= []
+    status_other_lemmas = ["finish", "end", "complete", "conclude", "terminate"]
+    status_start_lemmas = ["seek", "agree", "reached", "came", "decide"]
+    status_end_lemmas = ["buy", "purchase", "acquire", "get", "obtain", "take", "secure", "gain", "procure", "trade", "agree"]
+    matcher = Matcher(nlp.vocab)
+    pattern = [ {"LEMMA": {"IN": status_start_lemmas}, "OP": "+"}, {"LEMMA": {"NOT_IN": status_end_lemmas}, "OP": "*"}, {"LEMMA": {"IN": status_end_lemmas}}]
+    pattern = [ {"LEMMA": {"IN": status_other_lemmas}}]
+    matcher.add ("STATUS", [pattern], greedy = "LONGEST")
+    matches = matcher(doc)
+    matches.sort(key = lambda x: x[1])
+    for match in matches:
+        statuses.append(doc[match[1]:match[2]])
+    if statuses:
+        status = statuses[0]
+    else:
+        status = "---"
+    return status
 
 def findAcquired(doc):
     acquireds = []
     acquire = []
     matcher = Matcher(nlp.vocab)
-    pattern = [{"POS": "PROPN", "OP": "+"}] 
+    pattern = [{"ENT_TYPE": "ORG", "OP": "+"}] 
     # pattern = [{"LEMMA": {"IN": ["sale", "buy", "purchase", "acquire", "get", "obtain", "take", "secure", "gain", "procure", "trade"]}}]
     # pattern = [{"ENT_TYPE": "ORG"}]
     # pattern = [{{"POS": "PROPN", "OP": "+"}, {"-"}, {"POS": "PROPN", "OP": "+"}}]
-    matcher.add ("ACQUIRED", [pattern], greedy = "LONGEST")
+    matcher.add ("ACQUIRED_SENT", [pattern], greedy = "LONGEST")
     matches = matcher(doc)
     matches.sort(key = lambda x: x[1])
     for match in matches:
@@ -186,29 +216,50 @@ def findAcquired(doc):
         acquired = (acquireds[1])     
     else:
         acquired = "---"
+    doc2 = nlp(str(acquired)) 
+    acquireds = []
+    matcher = Matcher(nlp.vocab)
+    pattern = [{"ENT_TYPE": "ORG", "OP": "+"}] 
+    matcher.add ("ACQUIRED", [pattern], greedy = "LONGEST")
+    matches = matcher(doc2)
+    matches.sort(key = lambda x: x[1])
+    for match in matches:
+        acquireds.append(doc2[match[1]:match[2]])
+    if acquireds:
+        acquired = acquireds[0]   
+    else:
+        acquired = "---" 
 
     return acquired
 
-def findSeller1(doc):
+def findSeller(doc):
     sellers = []
     matcher = Matcher(nlp.vocab)
-    pattern = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": [ "offer", "sale", "transaction"]}, "OP": "*"}, {"LEMMA": {"IN": [ "offer", "sale", "transaction"]}}] 
-    # pattern = [{"LEMMA": {"IN": ["sale", "buy", "purchase", "acquire", "get", "obtain", "take", "secure", "gain", "procure", "trade"]}}]
-    matcher.add ("SELLER_SENT", [pattern], greedy = "LONGEST")
+    sell_lemmas = ["offer", "sale", "transaction"]
+    pattern7 = [{"ORTH": "from" }, {"ENT_TYPE": "ORG", "OP": "+"} ]
+    pattern1 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ORTH": {"IN": ["sold", "sell", "sells"]}}]
+    pattern2 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ORTH": {"IN": ["sold", "sell", "sells"]}}]
+    pattern3 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ORTH": {"IN": ["sold", "sell", "sells"]}}]
+    pattern4 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ORTH": {"IN": ["sold", "sell", "sells"]}}]
+    pattern5 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ORTH": {"IN": ["sold", "sell", "sells"]}}]
+    pattern6 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ORTH": {"IN": ["sold", "sell", "sells"]}}]
+    pattern = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": sell_lemmas}, "OP": "*"}, {"LEMMA": {"IN": sell_lemmas}}]
+    matcher.add ("SELLER_SENT", [ pattern7, pattern1, pattern2, pattern3, pattern4, pattern5, pattern6, pattern], greedy = "LONGEST")
     matches = matcher(doc)
     matches.sort(key = lambda x: x[1])
     for match in matches:
         sellers.append(doc[match[1]:match[2]])
     if sellers:
+        # print (sellers)
         seller = sellers[0]   
     else:
         seller = "---" 
     doc2 = nlp(str(seller)) 
     sellers = []
     matcher = Matcher(nlp.vocab)
-    pattern = [{"POS": "PROPN", "OP": "+"}] 
+    pattern = [{"ENT_TYPE": "ORG", "OP": "+"}] 
     matcher.add ("SELLER", [pattern], greedy = "LONGEST")
-    matches = matcher(doc)
+    matches = matcher(doc2)
     matches.sort(key = lambda x: x[1])
     for match in matches:
         sellers.append(doc2[match[1]:match[2]])
@@ -219,6 +270,71 @@ def findSeller1(doc):
     return seller
 
 
+def findacqbus(doc):
+    sellers = []
+    matcher = Matcher(nlp.vocab)
+    acqbus_lemmas = ["engaged"]
+
+    
+    # pattern = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": sell_lemmas}, "OP": "*"}, {"LEMMA": {"IN": sell_lemmas}}]
+    matcher.add ("SELLER_SENT", [ pattern], greedy = "LONGEST")
+    matches = matcher(doc)
+    matches.sort(key = lambda x: x[1])
+    for match in matches:
+        sellers.append(doc[match[1]:match[2]])
+    if sellers:
+        # print (sellers)
+        seller = sellers[0]   
+    else:
+        seller = "---" 
+    doc2 = nlp(str(seller)) 
+    sellers = []
+    matcher = Matcher(nlp.vocab)
+    pattern = [{"ENT_TYPE": "ORG", "OP": "+"}] 
+    matcher.add ("SELLER", [pattern], greedy = "LONGEST")
+    matches = matcher(doc2)
+    matches.sort(key = lambda x: x[1])
+    for match in matches:
+        sellers.append(doc2[match[1]:match[2]])
+    if sellers:
+        seller = sellers[0]   
+    else:
+        seller = "---" 
+    return seller
+
+
+
+def location(doc):
+    locations = []
+    matcher = Matcher(nlp.vocab)
+    pattern = [{"ENT_TYPE": "LOC", "OP": "+"}] 
+    pattern2 = [{"ENT_TYPE": "GPE", "OP": "+"}] 
+    matcher.add ("LOCATION_SENT", [ pattern, pattern2], greedy = "LONGEST")
+    matches = matcher(doc)
+    matches.sort(key = lambda x: x[1])
+    for match in matches:
+        locations.append(doc[match[1]:match[2]])
+    if locations:
+        # print (sellers)
+        place = locations[0]   
+    else:
+        place = "---" 
+    # doc2 = nlp(str(seller)) 
+    # sellers = []
+    # matcher = Matcher(nlp.vocab)
+    # pattern = [{"ENT_TYPE": "ORG", "OP": "+"}] 
+    # matcher.add ("SELLER", [pattern], greedy = "LONGEST")
+    # matches = matcher(doc2)
+    # matches.sort(key = lambda x: x[1])
+    # for match in matches:
+    #     sellers.append(doc2[match[1]:match[2]])
+    # if sellers:
+    #     seller = sellers[0]   
+    # else:
+    #     seller = "---" 
+    return place
+
+
 def writeData(docList:str):
     global STORIES
 
@@ -226,15 +342,29 @@ def writeData(docList:str):
     outFile = open(fileName, "w")
     
     for story in STORIES:
-        # print("TEXT: ", story._text, file=outFile)
-        # print("ACQUIRED: ", story._acquired)
-        # print("ACQBUS: ", story._acqbus, file=outFile)
-        # print("ACQLOC: ", story._acqloc, file=outFile)
-        # print("DLRAMT: ", story._dlramt, file=outFile)
-        # print("PURCHASER: ", story._purchaser)
-        # print("SELLER: ", story._seller)
-        # print("STATUS: ", story._status, file=outFile)
-
+        print("TEXT: ", story._text, file=outFile)
+        if str(story._acquired) == "---":
+            print("ACQUIRED: ", story._acquired, file=outFile)    
+        else:
+            print("ACQUIRED: ", "\"" + str(story._acquired) + "\"", file=outFile)
+        print("ACQBUS: ", story._acqbus, file=outFile)
+        if str(story._acqloc) == "---":
+            print("ACQLOC: ", story._acqloc, file=outFile)    
+        else:
+            print("ACQLOC: ", "\"" + str(story._acqloc) + "\"", file=outFile) 
+        print("DLRAMT: ", story._dlramt, file=outFile)
+        if str(story._purchaser) == "---":
+            print("PURCHASER: ", story._purchaser, file=outFile)    
+        else:
+            print("PURCHASER: ", "\"" + str(story._purchaser) + "\"", file=outFile) 
+        if str(story._seller) == "---":
+            print("SELLER: ", story._seller, file=outFile)    
+        else:
+            print("SELLER: ", "\"" + str(story._seller) + "\"", file=outFile) 
+        if str(story._status) == "---":
+            print("STATUS: ", story._status, file=outFile)    
+        else:
+            print("STATUS: ", "\"" + str(story._status) + "\"", file=outFile) 
         outFile.write("\n")
 
 
