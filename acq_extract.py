@@ -94,11 +94,15 @@ def readFiles():
     global STORIES
     global ans_list_list
     i = 0
+    
     for path,file in zip(PATH, FILENAME):
         story = Story(file)
         para = []
         docs = []
         #Do Stuff to get data needed
+
+        storyText = open(path + file,"r")
+        SENTENCES.append(sent_tokenize(storyText.read()))
 
         for line in open(path + file,"r"):
             type(line)
@@ -159,7 +163,6 @@ def readFiles():
         STORIES.append(story)
         # i = i+1
     return
-
 
 def findPurchaser(doc):
     purchasers = []
@@ -291,7 +294,6 @@ def findSeller(doc):
         seller = "---" 
     return seller
 
-
 def findacqbus(doc):
     sellers = []
     matcher = Matcher(nlp.vocab)
@@ -324,8 +326,6 @@ def findacqbus(doc):
         seller = "---" 
     return seller
 
-
-
 def location(doc):
     locations = []
     matcher = Matcher(nlp.vocab)
@@ -356,7 +356,6 @@ def location(doc):
     #     seller = "---" 
     return place
 
-
 def writeData(docList:str):
     global STORIES
 
@@ -365,28 +364,36 @@ def writeData(docList:str):
     
     for story in STORIES:
         print("TEXT: ", story._text, file=outFile)
+        
         if str(story._acquired) == "---":
             print("ACQUIRED: ", story._acquired, file=outFile)    
         else:
             print("ACQUIRED: ", "\"" + str(story._acquired) + "\"", file=outFile)
+        
         print("ACQBUS: ", story._acqbus, file=outFile)
+        
         if str(story._acqloc) == "---":
             print("ACQLOC: ", story._acqloc, file=outFile)    
         else:
             print("ACQLOC: ", "\"" + str(story._acqloc) + "\"", file=outFile) 
+        
         print("DLRAMT: ", story._dlramt, file=outFile)
+        
         if str(story._purchaser) == "---":
             print("PURCHASER: ", story._purchaser, file=outFile)    
         else:
             print("PURCHASER: ", "\"" + str(story._purchaser) + "\"", file=outFile) 
+        
         if str(story._seller) == "---":
             print("SELLER: ", story._seller, file=outFile)    
         else:
             print("SELLER: ", "\"" + str(story._seller) + "\"", file=outFile) 
+        
         if str(story._status) == "---":
             print("STATUS: ", story._status, file=outFile)    
         else:
             print("STATUS: ", "\"" + str(story._status) + "\"", file=outFile) 
+        
         outFile.write("\n")
 
 def findPrice(sentenceList:list):
@@ -609,15 +616,17 @@ if (len(sys.argv)) == 2:
     getFiles(sys.argv[1])
     readFiles()
 
+    print("Test 1")
     for story,sentence in zip(STORIES,SENTENCES):
-        #story._dlramt = "---"
+        print("Test 2")
         story._dlramt = "\"" + findPrice(sentence) + "\""
         if story._dlramt == "\"---\"":
             story._dlramt = "---"
-
-    for story,sentence in zip(STORIES,SENTENCES):
-        story._acqloc = findLoc(sentence) 
-        print(story._acqloc)
+        print(story._dlramt)
+    print("Test 3")
+    # for story,sentence in zip(STORIES,SENTENCES):
+    #     story._acqloc = findLoc(sentence) 
+    #     print(story._acqloc)
 
     writeData(sys.argv[1])
     
