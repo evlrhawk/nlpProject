@@ -25,8 +25,8 @@ from thinc.types import Fal
 from spacy.training import Corpus
 #nltk.download('stop_words')
 
-nlp = spacy.load("en_core_web_md")
-NER = spacy.load("en_core_web_trf")
+#nlp = spacy.load("en_core_web_md")
+nlp = spacy.load("en_core_web_trf")
 
 # Globals
 CURRENCIES = {"francs", "dlr", "dlrs", "lire", "pesos", "stg", "yen"}
@@ -157,7 +157,7 @@ def readFiles():
         story._acquired = findAcquired(doc)
         story._seller = findSeller(doc)
         story._acqloc = location(doc)
-        # story._acqbus = findacqbus(doc)
+        story._acqbus = findacqbus(doc)
         story._status = findStatus(doc)
         #append story with data
         STORIES.append(story)
@@ -299,23 +299,26 @@ def findacqbus(doc):
     matcher = Matcher(nlp.vocab)
     acqbus_lemmas = ["engaged"]
 
-    
-    # pattern = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": sell_lemmas}, "OP": "*"}, {"LEMMA": {"IN": sell_lemmas}}]
-    matcher.add ("SELLER_SENT", [ pattern], greedy = "LONGEST")
+    prev = ["provide", "provides", "give", "gives"]
+    post = ["to", "for"]
+    pattern = [{"ORTH": {"IN": prev}}, {"ORTH": {"NOT_IN": post}, "OP": "*"}]
+    #pattern1 = [{"POS": "ADJ"}, {"ORTH": {"NOT_IN": ["business"]}, "OP": "*"}]
+    matcher.add ("BUS_ACQ", [ pattern], greedy = "LONGEST")
     matches = matcher(doc)
     matches.sort(key = lambda x: x[1])
     for match in matches:
         sellers.append(doc[match[1]:match[2]])
     if sellers:
-        # print (sellers)
+        print (sellers)
         seller = sellers[0]   
     else:
         seller = "---" 
     doc2 = nlp(str(seller)) 
     sellers = []
     matcher = Matcher(nlp.vocab)
-    pattern = [{"ENT_TYPE": "ORG", "OP": "+"}] 
-    matcher.add ("SELLER", [pattern], greedy = "LONGEST")
+    pattern = [{"ORTH": {"NOT_IN": prev}, "OP": "*"}]
+    #pattern1 = [{"POS": "NOUN", "OP": "*"}] 
+    matcher.add ("BUS", [pattern], greedy = "LONGEST")
     matches = matcher(doc2)
     matches.sort(key = lambda x: x[1])
     for match in matches:
@@ -370,7 +373,10 @@ def writeData(docList:str):
         else:
             print("ACQUIRED: ", "\"" + str(story._acquired) + "\"", file=outFile)
         
-        print("ACQBUS: ", story._acqbus, file=outFile)
+        if str(story._acqbus) == "---":
+            print("ACQBUS: ", story._acqbus, file=outFile)    
+        else:
+            print("ACQBUS: ", "\"" + str(story._acqbus) + "\"", file=outFile)
         
         if str(story._acqloc) == "---":
             print("ACQLOC: ", story._acqloc, file=outFile)    
@@ -506,7 +512,7 @@ def findLoc(sentenceList:list):
     newSent = sent_tokenize(sent)
 
     for sentence in sentenceList:
-        doc = NER(sentence)
+        doc = nlp(sentence)
         found = False
         skip = False 
         location = ""
@@ -616,14 +622,11 @@ if (len(sys.argv)) == 2:
     getFiles(sys.argv[1])
     readFiles()
 
-    print("Test 1")
     for story,sentence in zip(STORIES,SENTENCES):
-        print("Test 2")
         story._dlramt = "\"" + findPrice(sentence) + "\""
         if story._dlramt == "\"---\"":
             story._dlramt = "---"
-        print(story._dlramt)
-    print("Test 3")
+
     # for story,sentence in zip(STORIES,SENTENCES):
     #     story._acqloc = findLoc(sentence) 
     #     print(story._acqloc)
