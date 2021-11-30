@@ -299,7 +299,7 @@ def findacqbus(doc):
     matcher = Matcher(nlp.vocab)
     acqbus_lemmas = ["engaged"]
 
-    prev = ["provide", "provides", "give", "gives"]
+    prev = ["provide", "provides", "gives"]
     post = ["to", "for"]
     pattern = [{"ORTH": {"IN": prev}}, {"ORTH": {"NOT_IN": post}, "OP": "*"}]
     #pattern1 = [{"POS": "ADJ"}, {"ORTH": {"NOT_IN": ["business"]}, "OP": "*"}]

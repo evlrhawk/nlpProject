@@ -54,7 +54,7 @@ STATUS:  "ended"
 
 TEXT:  10348
 ACQUIRED:  "Noblee"
-ACQBUS:  "the purchase price. Noblee, a supplier of specialised refined oils and fats"
+ACQBUS:  ---
 ACQLOC:  "Hamburg"
 DLRAMT:  ---
 PURCHASER:  "Henkel KGaA"
@@ -288,7 +288,7 @@ STATUS:  "end"
 
 TEXT:  11213
 ACQUIRED:  ---
-ACQBUS:  "it access"
+ACQBUS:  ---
 ACQLOC:  "Australia"
 DLRAMT:  "300 mln dlrs"
 PURCHASER:  "CSR Ltd"
@@ -297,7 +297,7 @@ STATUS:  ---
 
 TEXT:  11237
 ACQUIRED:  "Pioneer Sugar Mills Ltd. CSR"
-ACQBUS:  "Pioneer Sugar shareholders a price equivalent"
+ACQBUS:  "a premium of 91 pct over Pioneer's last reported net tangible assets per share, CSR said. CSR said the generous offer price reflects the cost savings which will flow from integrated management of CSR's and Pioneer's raw sugar mills and building materials businesses. These economies can only be achieved through CSR control and management of Pioneer Sugar, it added. The takeover announcement came soon after CSR's earlier reported statement that it will sell its Delhi Petroleum Pty Ltd unit"
 ACQLOC:  ---
 DLRAMT:  "985 mln dlrs"
 PURCHASER:  "CSR"
@@ -612,7 +612,7 @@ STATUS:  "completed"
 
 TEXT:  12751
 ACQUIRED:  "Preussag AG"
-ACQBUS:  "them 35 pct each. REUTER"
+ACQBUS:  ---
 ACQLOC:  ---
 DLRAMT:  ---
 PURCHASER:  "MIM Holdings Ltd"
@@ -1161,7 +1161,7 @@ STATUS:  "completed"
 
 TEXT:  16833
 ACQUIRED:  "Dome Petroleum Ltd"
-ACQBUS:  "a foreign oil company a dominant position in Canada's oil industry. Imperial Oil is already Canada's largest energy company, with 1986 revenues of 7.1 billion Canadian dlrs. Chicago-based Amoco had 1986 revenues of 20.23 billion U.S. dlrs. Its Amoco Canada Petroleum subsidiary is 100 pct owned by Amoco Corp."
+ACQBUS:  ---
 ACQLOC:  "Canada"
 DLRAMT:  "20.23 billion U.S. dlrs"
 PURCHASER:  "Amoco Corp"
@@ -1233,7 +1233,7 @@ STATUS:  ---
 
 TEXT:  1729
 ACQUIRED:  "CTS Corp"
-ACQBUS:  "it ownership of 35 pct of the outstanding stock. Dynamics said the price of stock under the option, exercisable"
+ACQBUS:  ---
 ACQLOC:  ---
 DLRAMT:  ---
 PURCHASER:  "Dynamics Corp of America"
@@ -1845,7 +1845,7 @@ STATUS:  ---
 
 TEXT:  21382
 ACQUIRED:  ---
-ACQBUS:  "serious consideration"
+ACQBUS:  ---
 ACQLOC:  ---
 DLRAMT:  "50 mln dlrs"
 PURCHASER:  "IC Industries Inc"
@@ -2097,7 +2097,7 @@ STATUS:  ---
 
 TEXT:  2897
 ACQUIRED:  ---
-ACQBUS:  "the selling price. Proceeds will be used"
+ACQBUS:  ---
 ACQLOC:  "Saskatchewan"
 DLRAMT:  ---
 PURCHASER:  "Canadian Natural Resources Ltd"
@@ -2142,7 +2142,7 @@ STATUS:  ---
 
 TEXT:  3023
 ACQUIRED:  "Caesars World Inc"
-ACQBUS:  "Sosnoff a majority interest on a fully diluted basis, the arrangement of sufficient financing"
+ACQBUS:  ---
 ACQLOC:  "New York"
 DLRAMT:  "475 mln dlrs"
 PURCHASER:  "MTS Acquisition Corp"
@@ -2340,7 +2340,7 @@ STATUS:  ---
 
 TEXT:  3984
 ACQUIRED:  "Baker International Corp"
-ACQBUS:  "the companies six months"
+ACQBUS:  ---
 ACQLOC:  "U.S."
 DLRAMT:  "297.7 mln dlrs"
 PURCHASER:  "Hughes Tool Co"
@@ -2610,7 +2610,7 @@ STATUS:  ---
 
 TEXT:  5293
 ACQUIRED:  "Symbion Inc"
-ACQBUS:  "it control. Warburg said it reserves the right"
+ACQBUS:  "its shareholder list"
 ACQLOC:  ---
 DLRAMT:  "3.50 dlrs"
 PURCHASER:  "Warburg, Pincus Capital Corp"
@@ -2736,7 +2736,7 @@ STATUS:  "completed"
 
 TEXT:  6034
 ACQUIRED:  ---
-ACQBUS:  "a reason. Kresge is the forerunner of what is now the K Mart chain. The name was changed"
+ACQBUS:  ---
 ACQLOC:  ---
 DLRAMT:  ---
 PURCHASER:  "K Mart Corp"
@@ -2916,7 +2916,7 @@ STATUS:  ---
 
 TEXT:  6697
 ACQUIRED:  "Bard International Associates Inc"
-ACQBUS:  "former Bard shareholders control of the combined company. Bard makes tennis and squash racquets and accessories."
+ACQBUS:  ---
 ACQLOC:  ---
 DLRAMT:  ---
 PURCHASER:  "Amour Inc"
@@ -3033,7 +3033,7 @@ STATUS:  "completes"
 
 TEXT:  6961
 ACQUIRED:  "Banco Portugues de Investmento Sarl"
-ACQBUS:  "permission soon.  This is the first time a Japanese bank has bought a stake in a Portuguese bank. Sanwa plans"
+ACQBUS:  ---
 ACQLOC:  "Oporto"
 DLRAMT:  "351 mln yen"
 PURCHASER:  "Sanwa Bank Ltd"
@@ -3186,7 +3186,7 @@ STATUS:  "completed"
 
 TEXT:  8359
 ACQUIRED:  "Air Atlanta Inc"
-ACQBUS:  "details of the loan"
+ACQBUS:  ---
 ACQLOC:  "U.S."
 DLRAMT:  ---
 PURCHASER:  "KLM Royal Dutch Airlines"
@@ -3258,7 +3258,7 @@ STATUS:  ---
 
 TEXT:  8571
 ACQUIRED:  "Deltec Panamerica SA"
-ACQBUS:  "terms of the sale. In addition, Avalon said three other directors resigned. It said Benjamin W. Macdonald, a director of TMOC Resources Ltd, the principal holder of Avalon stock, and Hardwick Simmons, a vice chairman of Shearson Lehman Bros Inc, were then named"
+ACQBUS:  ---
 ACQLOC:  ---
 DLRAMT:  ---
 PURCHASER:  "Avalon Corp"
@@ -3267,7 +3267,7 @@ STATUS:  ---
 
 TEXT:  8628
 ACQUIRED:  "Shearson Lehman Brothers Inc"
-ACQBUS:  "Nippon Life a ringside seat and possibly lower commissions on Wall Street, where it invests an increasing percentage of its assets of 90.2 billion dlrs, they said. Nippon Life staff will also acquire expertise in business sectors which have not yet opened up in Japan, they added. The agreement between the two companies calls"
+ACQBUS:  ---
 ACQLOC:  "Tokyo"
 DLRAMT:  "7.33 mln yen"
 PURCHASER:  "Nippon Life Insurance Co's"
@@ -3276,7 +3276,7 @@ STATUS:  ---
 
 TEXT:  8704
 ACQUIRED:  "Triangle Microwave Inc"
-ACQBUS:  "KDI an option"
+ACQBUS:  ---
 ACQLOC:  ---
 DLRAMT:  "35 mln dlrs"
 PURCHASER:  "KDI Corp"
@@ -3447,7 +3447,7 @@ STATUS:  "ended"
 
 TEXT:  9338
 ACQUIRED:  "Equitable Life Assurance Society"
-ACQBUS:  "it broader distribution of its corporate relocation service and mortgage programs."
+ACQBUS:  ---
 ACQLOC:  "U.S."
 DLRAMT:  ---
 PURCHASER:  "The Travelers Corp's Travelers Mortgage Services"
@@ -4005,7 +4005,7 @@ STATUS:  ---
 
 TEXT:  2010
 ACQUIRED:  ---
-ACQBUS:  "the owners control of 16 pct of the French telephone switching market, sources close"
+ACQBUS:  ---
 ACQLOC:  "Sweden"
 DLRAMT:  ---
 PURCHASER:  "Cie Generale de Constructions Telephoniques"
@@ -4149,7 +4149,7 @@ STATUS:  "ended"
 
 TEXT:  4315
 ACQUIRED:  ---
-ACQBUS:  "Venezuela an additional outlet"
+ACQBUS:  ---
 ACQLOC:  "Caracas"
 DLRAMT:  "290 mln dlrs"
 PURCHASER:  "Union Pacific Corp"
@@ -4203,7 +4203,7 @@ STATUS:  ---
 
 TEXT:  505
 ACQUIRED:  ---
-ACQBUS:  "further details. Bank of America's West German branch lost some 32 mln marks in 1985. The result includes profit and loss transfers from Bankhaus Centrale Credit and the Visa organisation. The sale of the units is part of the bank's worldwide restructuring plan. REUTER"
+ACQBUS:  ---
 ACQLOC:  ---
 DLRAMT:  ---
 PURCHASER:  "Bank of America NT"
