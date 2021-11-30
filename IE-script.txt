@@ -1,0 +1,2 @@
+python3 -m spacy download en_core_web_trf
+python3 acq_extract.py doclist.txt
