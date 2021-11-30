@@ -309,7 +309,7 @@ def findacqbus(doc):
     for match in matches:
         sellers.append(doc[match[1]:match[2]])
     if sellers:
-        print (sellers)
+        #print (sellers)
         seller = sellers[0]   
     else:
         seller = "---" 
