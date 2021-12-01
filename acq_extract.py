@@ -1,5 +1,6 @@
 # Imports
 import os
+from re import A
 from nltk.tokenize.regexp import RegexpTokenizer 
 import pandas as pd
 import sys
@@ -133,6 +134,7 @@ def readFiles():
         story._acqloc = location(doc)
         # story._acqbus = findacqbus(doc)
         story._status = findStatus(doc)
+        # story._dlramt = money(doc)
         #append story with data
         STORIES.append(story)
         # i = i+1
@@ -141,21 +143,17 @@ def readFiles():
 
 def findPurchaser(doc):
     purchasers = []
-    aquisition_lemmas = ["buy", "purchase", "acquire", "get", "obtain", "take", "secure", "gain", "procure", "trade"]
+    words_before_pur = ["by"]
+    aquisition_lemmas = ["buy", "purchase", "acquire", "get", "obtain", "take", "secure", "gain", "procure", "trade", "tendered", "pay"]
     matcher = Matcher(nlp.vocab)
     pattern = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": aquisition_lemmas}, "OP": "*"}, {"LEMMA": {"IN": aquisition_lemmas}}]
     pattern1 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": aquisition_lemmas}, "OP": "*"}, {"LEMMA": {"IN": aquisition_lemmas}}]
     pattern2 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"LEMMA": {"NOT_IN": aquisition_lemmas}, "OP": "*"}, {"LEMMA": {"IN": aquisition_lemmas}}]
     pattern3 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": aquisition_lemmas}, "OP": "*"}, {"LEMMA": {"IN": aquisition_lemmas}}]
     pattern4 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": aquisition_lemmas}, "OP": "*"}, {"LEMMA": {"IN": aquisition_lemmas}}]
-    # pattern1 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"LEMMA": {"IN": aquisition_lemmas}}]    
-    # pattern2 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"IN": aquisition_lemmas}}]
-    # pattern3 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"IN": aquisition_lemmas}}]
-    # pattern4 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"IN": aquisition_lemmas}}]
-    # pattern5 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"IN": aquisition_lemmas}}]
-    # pattern6 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"IN": aquisition_lemmas}}]
-    pattern5 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ORTH": "said" }]
-    matcher.add ("PURCHASER_SENT", [pattern5, pattern, pattern4, pattern1, pattern2, pattern3], greedy = "LONGEST")
+    pattern5 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"LEMMA": "say" }]
+    pattern6 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ORTH": {"IN": words_before_pur}}, {"ENT_TYPE": "ORG", "OP": "+"}]
+    matcher.add ("PURCHASER_SENT", [pattern, pattern1, pattern2, pattern3, pattern4, pattern5, pattern6], greedy = "LONGEST")
     matches = matcher(doc)
     matches.sort(key = lambda x: x[1])
     for match in matches:
@@ -182,13 +180,13 @@ def findPurchaser(doc):
 
 def findStatus(doc):
     statuses= []
-    status_other_lemmas = ["finish", "end", "complete", "conclude", "terminate"]
-    status_start_lemmas = ["seek", "agree", "reached", "came", "decide"]
+    status_other_lemmas = ["finish", "end", "complete", "conclude", "terminate", "tender", "agreed", "acquired"]
+    status_start_lemmas = ["seek", "agree", "reached", "came", "decide", "finalized","interested","tetiative"]
     status_end_lemmas = ["buy", "purchase", "acquire", "get", "obtain", "take", "secure", "gain", "procure", "trade", "agree"]
     matcher = Matcher(nlp.vocab)
     pattern = [ {"LEMMA": {"IN": status_start_lemmas}, "OP": "+"}, {"LEMMA": {"NOT_IN": status_end_lemmas}, "OP": "*"}, {"LEMMA": {"IN": status_end_lemmas}}]
-    pattern = [ {"LEMMA": {"IN": status_other_lemmas}}]
-    matcher.add ("STATUS", [pattern], greedy = "LONGEST")
+    pattern1 = [ {"LEMMA": {"IN": status_other_lemmas}}]
+    matcher.add ("STATUS", [pattern, pattern1], greedy = "LONGEST")
     matches = matcher(doc)
     matches.sort(key = lambda x: x[1])
     for match in matches:
@@ -201,19 +199,34 @@ def findStatus(doc):
 
 def findAcquired(doc):
     acquireds = []
+    possible_inter_words = ["of", "in", "for" ]
     acquire = []
+    start_acquire_words = ["stake"]
+    aquisition_lemmas = ["sell","buy", "purchase", "acquire", "get", "obtain", "take", "secure", "gain", "procure", "trade", "bid"]
     matcher = Matcher(nlp.vocab)
-    pattern = [{"ENT_TYPE": "ORG", "OP": "+"}] 
-    # pattern = [{"LEMMA": {"IN": ["sale", "buy", "purchase", "acquire", "get", "obtain", "take", "secure", "gain", "procure", "trade"]}}]
-    # pattern = [{"ENT_TYPE": "ORG"}]
-    # pattern = [{{"POS": "PROPN", "OP": "+"}, {"-"}, {"POS": "PROPN", "OP": "+"}}]
-    matcher.add ("ACQUIRED_SENT", [pattern], greedy = "LONGEST")
+    
+    # pattern = [{"ENT_TYPE": "ORG", "OP": "+"}] 
+    pattern2 = [{"LEMMA": {"IN": aquisition_lemmas}}, {"ORTH": {"IN": possible_inter_words}, "OP": "*"}, {"ENT_TYPE": "ORG", "OP": "+"}]
+    pattern3 = [{"ORTH": {"IN": possible_inter_words}, "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "+"}]
+    pattern4 = [{"ORTH": {"IN": start_acquire_words}}, {"ORTH": {"IN": possible_inter_words}, "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "+"}]
+    pattern5 = [{"LEMMA": {"IN": aquisition_lemmas}}, {"ENT_TYPE": "ORG", "OP": "!"},{"ENT_TYPE": "ORG", "OP": "+"}]
+    pattern6 = [{"LEMMA": {"IN": aquisition_lemmas}}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "+"}]
+    pattern7 = [{"LEMMA": {"IN": aquisition_lemmas}}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "+"}]
+    pattern8 = [{"LEMMA": {"IN": aquisition_lemmas}}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "+"}]
+    pattern9 = [{"LEMMA": {"IN": aquisition_lemmas}}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "+"}]
+    pattern10 = [{"LEMMA": {"IN": aquisition_lemmas}}, {"ENT_TYPE": "ORG", "OP": "+"}]
+    pattern11 = [{"LEMMA": {"IN": aquisition_lemmas}}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "+"}]
+    
+    
+    matcher.add ("ACQUIRED_SENT", [ pattern2, pattern3, pattern4, pattern5, pattern6, pattern7, pattern8, pattern9, pattern10, pattern11], greedy = "LONGEST")
     matches = matcher(doc)
     matches.sort(key = lambda x: x[1])
     for match in matches:
         acquireds.append(doc[match[1]:match[2]])
-    if len(acquireds) > 2:
-        acquired = (acquireds[1])     
+    if acquireds:
+        acquired = (acquireds[0])     
+    # if len(acquireds)>2:
+    #     acquired = (acquireds[1])  
     else:
         acquired = "---"
     doc2 = nlp(str(acquired)) 
@@ -236,15 +249,23 @@ def findSeller(doc):
     sellers = []
     matcher = Matcher(nlp.vocab)
     sell_lemmas = ["offer", "sale", "transaction"]
+    seller_list = ["sold", "sell", "tendered", "sells" ]
+    past_seller = ["were", "was", "will", "would", "has", "had"]
+
+
+    pattern = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ORTH": {"IN": seller_list}}]
+    pattern1 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ORTH": {"NOT_IN": seller_list}, "OP": "*"}, {"ORTH": {"IN": seller_list}}]
+    pattern2 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ORTH": {"IN": seller_list}}]
+    pattern3 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ORTH": {"IN": seller_list}}]
+    pattern4 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ORTH": {"IN": seller_list}}]
+    pattern5 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ORTH": {"IN": seller_list}}]
+    pattern6 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ORTH": {"IN": seller_list}}]
     pattern7 = [{"ORTH": "from" }, {"ENT_TYPE": "ORG", "OP": "+"} ]
-    pattern1 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ORTH": {"IN": ["sold", "sell", "sells"]}}]
-    pattern2 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ORTH": {"IN": ["sold", "sell", "sells"]}}]
-    pattern3 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ORTH": {"IN": ["sold", "sell", "sells"]}}]
-    pattern4 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ORTH": {"IN": ["sold", "sell", "sells"]}}]
-    pattern5 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ORTH": {"IN": ["sold", "sell", "sells"]}}]
-    pattern6 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ORTH": {"IN": ["sold", "sell", "sells"]}}]
-    pattern = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": sell_lemmas}, "OP": "*"}, {"LEMMA": {"IN": sell_lemmas}}]
-    matcher.add ("SELLER_SENT", [ pattern7, pattern1, pattern2, pattern3, pattern4, pattern5, pattern6, pattern], greedy = "LONGEST")
+    pattern8 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ORTH": {"IN": past_seller }}, {"ORTH": {"IN": seller_list}} ]
+    pattern9 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": sell_lemmas}, "OP": "*"}, {"LEMMA": {"IN": sell_lemmas}}]
+    
+    
+    matcher.add ("SELLER_SENT", [pattern1, pattern2, pattern3, pattern4, pattern5, pattern6, pattern8, pattern7, pattern9], greedy = "LONGEST")
     matches = matcher(doc)
     matches.sort(key = lambda x: x[1])
     for match in matches:
@@ -272,26 +293,47 @@ def findSeller(doc):
 
 def findacqbus(doc):
     sellers = []
+    acqbus_lemmas = ["buy", "purchase", "acquire", "get", "obtain", "take", "secure", "gain", "procure", "trade", "tendered"]
     matcher = Matcher(nlp.vocab)
     acqbus_lemmas = ["engaged"]
+    acqbus_words = ["its", "the", "a", "of", "and" ,"'s"]
+    acqbus_end_words = ["to", "business", "company", "division", ".", "is", ","]
+    acqbus_end_end_words = ["business", "company", "division"]
+    acqbus_inter_words = ["provide"]
 
-    
-    # pattern = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": sell_lemmas}, "OP": "*"}, {"LEMMA": {"IN": sell_lemmas}}]
-    matcher.add ("SELLER_SENT", [ pattern], greedy = "LONGEST")
+
+    # pattern7 = [{"ENT_TYPE": "ORG", "OP": "+"},{"ORTH": {"IN":  acqbus_inter_words}, "OP": "+"},  {"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"IN": acqbus_end_end_words}}]
+    # pattern = [{"LEMMA": {"IN": acqbus_lemmas}, "OP": "+"}, {"ORTH": {"IN":  acqbus_words}, "OP": "*"}, {"ORTH": {"NOT_IN": acqbut_end_words}, "OP": "*"},{"ORTH": {"IN": acqbut_end_words}}]
+    # pattern1 = [{"ORTH": {"IN":  acqbus_words}, "OP": "+"},{"ENT_TYPE": "LOC", "OP": "+"},  {"ORTH": {"NOT_IN": acqbut_end_words}, "OP": "*"},{"ORTH": {"IN": acqbut_end_words}}]
+    # pattern = [{"ENT_TYPE": "ORG", "OP": "+"},{"ORTH": {"IN":  acqbus_words}, "OP": "+"},  {"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"IN": acqbus_end_end_words}}]
+    # pattern1 = [{"ENT_TYPE": "ORG", "OP": "+"},{"ORTH": {"IN":  acqbus_words}, "OP": "+"},  {"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"IN": acqbus_end_end_words}}]
+    # pattern2 = [{"ENT_TYPE": "ORG", "OP": "+"},{"ORTH": {"IN":  acqbus_words}, "OP": "+"},  {"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}}, {"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"IN": acqbus_end_end_words}}]
+    # pattern3 = [{"ENT_TYPE": "ORG", "OP": "+"},{"ORTH": {"IN":  acqbus_words}, "OP": "+"},  {"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"IN": acqbus_end_end_words}}]
+    # pattern4 = [{"ENT_TYPE": "ORG", "OP": "+"},{"ORTH": {"IN":  acqbus_words}, "OP": "+"},  {"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"IN": acqbus_end_end_words}}]
+    # pattern5 = [{"ENT_TYPE": "ORG", "OP": "+"},{"ORTH": {"IN":  acqbus_words}, "OP": "+"},  {"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"IN": acqbus_end_end_words}}]
+    # pattern6 = [{"ENT_TYPE": "ORG", "OP": "+"},{"ORTH": {"IN":  acqbus_words}, "OP": "+"},  {"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"IN": acqbus_end_end_words}}]
+
+    # matcher.add ("ACQBUS_SENT", [pattern, pattern1, pattern2, pattern3, pattern4, pattern5, pattern6, pattern7], greedy = "LONGEST")
     matches = matcher(doc)
     matches.sort(key = lambda x: x[1])
     for match in matches:
         sellers.append(doc[match[1]:match[2]])
     if sellers:
-        # print (sellers)
+
         seller = sellers[0]   
     else:
         seller = "---" 
+    # print (seller)
     doc2 = nlp(str(seller)) 
     sellers = []
     matcher = Matcher(nlp.vocab)
-    pattern = [{"ENT_TYPE": "ORG", "OP": "+"}] 
-    matcher.add ("SELLER", [pattern], greedy = "LONGEST")
+
+
+    pattern = [{"ORTH": {"NOT_IN":  acqbus_words}}, {"ORTH": {"NOT_IN": acqbus_end_end_words}, "OP": "*"}]
+    # pattern1 = [{"ORTH": {"NOT_IN":  acqbus_words}, "OP": "?"},{"ENT_TYPE": "LOC", "OP": "!"},  {"ORTH": {"NOT_IN": acqbut_end_words}, "OP": "*"}]
+    
+
+    matcher.add ("ACQBUS", [pattern], greedy = "LONGEST")
     matches = matcher(doc2)
     matches.sort(key = lambda x: x[1])
     for match in matches:
@@ -300,6 +342,7 @@ def findacqbus(doc):
         seller = sellers[0]   
     else:
         seller = "---" 
+
     return seller
 
 
@@ -307,6 +350,7 @@ def findacqbus(doc):
 def location(doc):
     locations = []
     matcher = Matcher(nlp.vocab)
+
     pattern = [{"ENT_TYPE": "LOC", "OP": "+"}] 
     pattern2 = [{"ENT_TYPE": "GPE", "OP": "+"}] 
     matcher.add ("LOCATION_SENT", [ pattern, pattern2], greedy = "LONGEST")
@@ -315,24 +359,29 @@ def location(doc):
     for match in matches:
         locations.append(doc[match[1]:match[2]])
     if locations:
-        # print (sellers)
+
         place = locations[0]   
     else:
         place = "---" 
-    # doc2 = nlp(str(seller)) 
-    # sellers = []
-    # matcher = Matcher(nlp.vocab)
-    # pattern = [{"ENT_TYPE": "ORG", "OP": "+"}] 
-    # matcher.add ("SELLER", [pattern], greedy = "LONGEST")
-    # matches = matcher(doc2)
-    # matches.sort(key = lambda x: x[1])
-    # for match in matches:
-    #     sellers.append(doc2[match[1]:match[2]])
-    # if sellers:
-    #     seller = sellers[0]   
-    # else:
-    #     seller = "---" 
     return place
+
+def money(doc):
+    values = []
+    matcher = Matcher(nlp.vocab)
+    pattern = [{"ENT_TYPE": "MONEY", "OP": "+"}] 
+    matcher.add ("LOCATION_SENT", [ pattern], greedy = "LONGEST")
+    matches = matcher(doc)
+    matches.sort(key = lambda x: x[1])
+    for match in matches:
+        values.append(doc[match[1]:match[2]])
+    if values:
+        money = values[0]   
+    else:
+        money = "---" 
+    return money
+
+
+
 
 
 def writeData(docList:str):
@@ -347,12 +396,18 @@ def writeData(docList:str):
             print("ACQUIRED: ", story._acquired, file=outFile)    
         else:
             print("ACQUIRED: ", "\"" + str(story._acquired) + "\"", file=outFile)
-        print("ACQBUS: ", story._acqbus, file=outFile)
+        if str(story._acqbus) == "---":
+            print("ACQBUS: ", story._acqbus, file=outFile)    
+        else:
+            print("ACQBUS: ", "\"" + str(story._acqbus) + "\"", file=outFile) 
         if str(story._acqloc) == "---":
             print("ACQLOC: ", story._acqloc, file=outFile)    
         else:
             print("ACQLOC: ", "\"" + str(story._acqloc) + "\"", file=outFile) 
-        print("DLRAMT: ", story._dlramt, file=outFile)
+        if str(story._dlramt) == "---":
+            print("DLRAMT: ", story._dlramt, file=outFile)    
+        else:
+            print("DLRAMT: ", "\"" + str(story._dlramt) + "\"", file=outFile) 
         if str(story._purchaser) == "---":
             print("PURCHASER: ", story._purchaser, file=outFile)    
         else:
