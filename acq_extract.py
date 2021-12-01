@@ -1,34 +1,47 @@
 # Imports
-import os
-from re import A
-from nltk.tokenize.regexp import RegexpTokenizer 
 import pandas as pd
 import sys
 import nltk
 import spacy
+import numpy as np
 # python -m spacy download en_core_web_md
+from nltk.tokenize.regexp import RegexpTokenizer 
 from spacy.tokens import DocBin
 from spacy import displacy  # use to see what is each word in our sentence is corresponding to
-nlp = spacy.load("en_core_web_md")
-import numpy as np
 from nltk.tokenize import sent_tokenize, word_tokenize
 from spacy.util import get_package_path
 from spacy.matcher import Matcher
-# nltk.download('punkt')
 from nltk.tokenize import blankline_tokenize
 from nltk.tokenize import WhitespaceTokenizer
 from nltk.tag import pos_tag
-# nltk.download('averaged_perceptron_tagger')
 from nltk import ne_chunk
-# nltk.download('maxent_ne_chunker')
-# nltk.download('words')
 from nltk.corpus import stopwords
-# nltk.download('stop_words')
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('maxent_ne_chunker')
+nltk.download('words')
+from nltk.corpus import stopwords
+from thinc.types import Fal
 from spacy.training import Corpus
+#nltk.download('stop_words')
+
+#nlp = spacy.load("en_core_web_md")
+nlp = spacy.load("en_core_web_trf")
 
 # Globals
+CURRENCIES = {"francs", "dlr", "dlrs", "lire", "pesos", "stg", "yen"}
+CURRENCY_ORIGIN = {"Belgian", "Canadian", "N.Z", "U.S."}
+CURRENCY_TYPE = {"cash"}
+KILL_WORDS = {"sales", "prices", "profits", "share", "more than", "not less than", "opposed"}#, "shares", "bid"}
+NUMBERS = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"}
+QUANTITIES = {"billion", "Billion", "bln", "BLN", "million", "Million", "mln", "MLN"}
+UNDISCLOSED = {"disclose", "disclosed","undisclosed"}
+UNDISCLOSED_NEXT = {"amount", "of", "sum"} #, "terms"}
+UNDISCLOSED_PREV = {"a", "almost","not", "been"}
+
 FILENAME = []
 PATH = []
+SENTENCES = []
 STORIES = []
 FILENAME_ans = []
 PATH_ans = []
@@ -37,13 +50,15 @@ ans_list_list = []
 # Classes
 class Story:
     _text = "---"
-    _acquired = "---"
+    _acquired = []
     _acqbus = "---"
     _acqloc = "---"
     _dlramt = "---"
-    _purchaser = "---"
-    _seller = "---"
+    _purchaser = []
+    _seller = []
     _status = "---"
+    _sentences = []
+    _content = ""
 
     def __init__(self, text):#, acquired, acqbus, acqloc, dlramt, purhcaser, seller, status):
         self._text = text
@@ -56,6 +71,11 @@ class Story:
         # self._status = status
 
 # Methods
+def isNumber(n:str):
+    if n.isdigit() or n.replace(".", "").isdigit():
+        return True
+    return False
+
 def getFiles(docList:str):
     global FILENAME
     global PATH
@@ -70,14 +90,19 @@ def getFiles(docList:str):
 def readFiles():
     global FILENAME
     global PATH
+    global SENTENCES
     global STORIES
     global ans_list_list
     i = 0
+    
     for path,file in zip(PATH, FILENAME):
         story = Story(file)
         para = []
         docs = []
         #Do Stuff to get data needed
+
+        storyText = open(path + file,"r")
+        SENTENCES.append(sent_tokenize(storyText.read()))
 
         for line in open(path + file,"r"):
             type(line)
@@ -87,7 +112,7 @@ def readFiles():
                 para = []
             if para_tokenize:
                 para.extend(para_tokenize)
-            pass
+            
         para = ' '.join(para)
         
 
@@ -132,7 +157,7 @@ def readFiles():
         story._acquired = findAcquired(doc)
         story._seller = findSeller(doc)
         story._acqloc = location(doc)
-        # story._acqbus = findacqbus(doc)
+        story._acqbus = findacqbus(doc)
         story._status = findStatus(doc)
         # story._dlramt = money(doc)
         #append story with data
@@ -140,12 +165,13 @@ def readFiles():
         # i = i+1
     return
 
-
 def findPurchaser(doc):
     purchasers = []
     words_before_pur = ["by"]
     aquisition_lemmas = ["buy", "purchase", "acquire", "get", "obtain", "take", "secure", "gain", "procure", "trade", "tendered", "pay"]
     matcher = Matcher(nlp.vocab)
+
+
     pattern = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": aquisition_lemmas}, "OP": "*"}, {"LEMMA": {"IN": aquisition_lemmas}}]
     pattern1 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": aquisition_lemmas}, "OP": "*"}, {"LEMMA": {"IN": aquisition_lemmas}}]
     pattern2 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"LEMMA": {"NOT_IN": aquisition_lemmas}, "OP": "*"}, {"LEMMA": {"IN": aquisition_lemmas}}]
@@ -153,6 +179,8 @@ def findPurchaser(doc):
     pattern4 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"ENT_TYPE": "ORG", "OP": "!"}, {"LEMMA": {"NOT_IN": aquisition_lemmas}, "OP": "*"}, {"LEMMA": {"IN": aquisition_lemmas}}]
     pattern5 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"LEMMA": "say" }]
     pattern6 = [{"ENT_TYPE": "ORG", "OP": "+"}, {"ORTH": {"IN": words_before_pur}}, {"ENT_TYPE": "ORG", "OP": "+"}]
+    
+    
     matcher.add ("PURCHASER_SENT", [pattern, pattern1, pattern2, pattern3, pattern4, pattern5, pattern6], greedy = "LONGEST")
     matches = matcher(doc)
     matches.sort(key = lambda x: x[1])
@@ -180,12 +208,18 @@ def findPurchaser(doc):
 
 def findStatus(doc):
     statuses= []
-    status_other_lemmas = ["finish", "end", "complete", "conclude", "terminate", "tender", "agreed", "acquired"]
-    status_start_lemmas = ["seek", "agree", "reached", "came", "decide", "finalized","interested","tetiative"]
-    status_end_lemmas = ["buy", "purchase", "acquire", "get", "obtain", "take", "secure", "gain", "procure", "trade", "agree"]
+    status_other_lemmas = ["finished", "ended", "completed", "concluded", "terminated", "tendered", "agreed", "acquired", "offered","rejected", "expired","proposed","approached","overturned"]
+    status_start_lemmas = ["seek", "agree", "reached", "came", "decide", "finalized","interested","tetiative", "raised", "offered" "letter","preliminary", "definitive", "negotiate", "filed", "completed","request", "assumed", "started", "signed","holding","ended","intend","increase"]
+    status_end_lemmas = ["buy", "purchase", "acquire", "get", "obtain", "take", "secure", "gain", "procure", "trade", "agree", "principle", "stake", "intent", "reduce","transfer", "terms", "suit", "requirements","response", "control", "offer", "talks","withdraw"]
     matcher = Matcher(nlp.vocab)
+
+
+
     pattern = [ {"LEMMA": {"IN": status_start_lemmas}, "OP": "+"}, {"LEMMA": {"NOT_IN": status_end_lemmas}, "OP": "*"}, {"LEMMA": {"IN": status_end_lemmas}}]
-    pattern1 = [ {"LEMMA": {"IN": status_other_lemmas}}]
+    pattern1 = [ {"ORTH": {"IN": status_other_lemmas}}]
+
+
+
     matcher.add ("STATUS", [pattern, pattern1], greedy = "LONGEST")
     matches = matcher(doc)
     matches.sort(key = lambda x: x[1])
@@ -290,36 +324,23 @@ def findSeller(doc):
         seller = "---" 
     return seller
 
-
 def findacqbus(doc):
     sellers = []
     acqbus_lemmas = ["buy", "purchase", "acquire", "get", "obtain", "take", "secure", "gain", "procure", "trade", "tendered"]
     matcher = Matcher(nlp.vocab)
     acqbus_lemmas = ["engaged"]
-    acqbus_words = ["its", "the", "a", "of", "and" ,"'s"]
-    acqbus_end_words = ["to", "business", "company", "division", ".", "is", ","]
-    acqbus_end_end_words = ["business", "company", "division"]
-    acqbus_inter_words = ["provide"]
 
-
-    # pattern7 = [{"ENT_TYPE": "ORG", "OP": "+"},{"ORTH": {"IN":  acqbus_inter_words}, "OP": "+"},  {"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"IN": acqbus_end_end_words}}]
-    # pattern = [{"LEMMA": {"IN": acqbus_lemmas}, "OP": "+"}, {"ORTH": {"IN":  acqbus_words}, "OP": "*"}, {"ORTH": {"NOT_IN": acqbut_end_words}, "OP": "*"},{"ORTH": {"IN": acqbut_end_words}}]
-    # pattern1 = [{"ORTH": {"IN":  acqbus_words}, "OP": "+"},{"ENT_TYPE": "LOC", "OP": "+"},  {"ORTH": {"NOT_IN": acqbut_end_words}, "OP": "*"},{"ORTH": {"IN": acqbut_end_words}}]
-    # pattern = [{"ENT_TYPE": "ORG", "OP": "+"},{"ORTH": {"IN":  acqbus_words}, "OP": "+"},  {"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"IN": acqbus_end_end_words}}]
-    # pattern1 = [{"ENT_TYPE": "ORG", "OP": "+"},{"ORTH": {"IN":  acqbus_words}, "OP": "+"},  {"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"IN": acqbus_end_end_words}}]
-    # pattern2 = [{"ENT_TYPE": "ORG", "OP": "+"},{"ORTH": {"IN":  acqbus_words}, "OP": "+"},  {"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}}, {"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"IN": acqbus_end_end_words}}]
-    # pattern3 = [{"ENT_TYPE": "ORG", "OP": "+"},{"ORTH": {"IN":  acqbus_words}, "OP": "+"},  {"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"IN": acqbus_end_end_words}}]
-    # pattern4 = [{"ENT_TYPE": "ORG", "OP": "+"},{"ORTH": {"IN":  acqbus_words}, "OP": "+"},  {"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"IN": acqbus_end_end_words}}]
-    # pattern5 = [{"ENT_TYPE": "ORG", "OP": "+"},{"ORTH": {"IN":  acqbus_words}, "OP": "+"},  {"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"IN": acqbus_end_end_words}}]
-    # pattern6 = [{"ENT_TYPE": "ORG", "OP": "+"},{"ORTH": {"IN":  acqbus_words}, "OP": "+"},  {"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"NOT_IN": acqbus_end_words}},{"ORTH": {"IN": acqbus_end_end_words}}]
-
-    # matcher.add ("ACQBUS_SENT", [pattern, pattern1, pattern2, pattern3, pattern4, pattern5, pattern6, pattern7], greedy = "LONGEST")
+    prev = ["provide", "provides", "gives"]
+    post = ["to", "for"]
+    pattern = [{"ORTH": {"IN": prev}}, {"ORTH": {"NOT_IN": post}, "OP": "*"}]
+    #pattern1 = [{"POS": "ADJ"}, {"ORTH": {"NOT_IN": ["business"]}, "OP": "*"}]
+    matcher.add ("BUS_ACQ", [ pattern], greedy = "LONGEST")
     matches = matcher(doc)
     matches.sort(key = lambda x: x[1])
     for match in matches:
         sellers.append(doc[match[1]:match[2]])
     if sellers:
-
+        #print (sellers)
         seller = sellers[0]   
     else:
         seller = "---" 
@@ -327,13 +348,9 @@ def findacqbus(doc):
     doc2 = nlp(str(seller)) 
     sellers = []
     matcher = Matcher(nlp.vocab)
-
-
-    pattern = [{"ORTH": {"NOT_IN":  acqbus_words}}, {"ORTH": {"NOT_IN": acqbus_end_end_words}, "OP": "*"}]
-    # pattern1 = [{"ORTH": {"NOT_IN":  acqbus_words}, "OP": "?"},{"ENT_TYPE": "LOC", "OP": "!"},  {"ORTH": {"NOT_IN": acqbut_end_words}, "OP": "*"}]
-    
-
-    matcher.add ("ACQBUS", [pattern], greedy = "LONGEST")
+    pattern = [{"ORTH": {"NOT_IN": prev}, "OP": "*"}]
+    #pattern1 = [{"POS": "NOUN", "OP": "*"}] 
+    matcher.add ("BUS", [pattern], greedy = "LONGEST")
     matches = matcher(doc2)
     matches.sort(key = lambda x: x[1])
     for match in matches:
@@ -344,8 +361,6 @@ def findacqbus(doc):
         seller = "---" 
 
     return seller
-
-
 
 def location(doc):
     locations = []
@@ -365,25 +380,6 @@ def location(doc):
         place = "---" 
     return place
 
-def money(doc):
-    values = []
-    matcher = Matcher(nlp.vocab)
-    pattern = [{"ENT_TYPE": "MONEY", "OP": "+"}] 
-    matcher.add ("LOCATION_SENT", [ pattern], greedy = "LONGEST")
-    matches = matcher(doc)
-    matches.sort(key = lambda x: x[1])
-    for match in matches:
-        values.append(doc[match[1]:match[2]])
-    if values:
-        money = values[0]   
-    else:
-        money = "---" 
-    return money
-
-
-
-
-
 def writeData(docList:str):
     global STORIES
 
@@ -392,36 +388,214 @@ def writeData(docList:str):
     
     for story in STORIES:
         print("TEXT: ", story._text, file=outFile)
+        
         if str(story._acquired) == "---":
             print("ACQUIRED: ", story._acquired, file=outFile)    
         else:
             print("ACQUIRED: ", "\"" + str(story._acquired) + "\"", file=outFile)
+        
         if str(story._acqbus) == "---":
             print("ACQBUS: ", story._acqbus, file=outFile)    
         else:
-            print("ACQBUS: ", "\"" + str(story._acqbus) + "\"", file=outFile) 
+            print("ACQBUS: ", "\"" + str(story._acqbus) + "\"", file=outFile)
+        
         if str(story._acqloc) == "---":
             print("ACQLOC: ", story._acqloc, file=outFile)    
         else:
             print("ACQLOC: ", "\"" + str(story._acqloc) + "\"", file=outFile) 
-        if str(story._dlramt) == "---":
-            print("DLRAMT: ", story._dlramt, file=outFile)    
-        else:
-            print("DLRAMT: ", "\"" + str(story._dlramt) + "\"", file=outFile) 
+        
+        print("DLRAMT: ", story._dlramt, file=outFile)
+        
         if str(story._purchaser) == "---":
             print("PURCHASER: ", story._purchaser, file=outFile)    
         else:
             print("PURCHASER: ", "\"" + str(story._purchaser) + "\"", file=outFile) 
+        
         if str(story._seller) == "---":
             print("SELLER: ", story._seller, file=outFile)    
         else:
             print("SELLER: ", "\"" + str(story._seller) + "\"", file=outFile) 
+        
         if str(story._status) == "---":
             print("STATUS: ", story._status, file=outFile)    
         else:
             print("STATUS: ", "\"" + str(story._status) + "\"", file=outFile) 
+        
         outFile.write("\n")
 
+def findPrice(sentenceList:list):
+    global CURRENCIES
+    global CURRENCY_ORIGIN
+    global CURRENCY_TYPE
+    global KILL_WORDS
+    global NUMBERS
+    global QUANTITIES
+    global UNDISCLOSED
+    global UNDISCLOSED_NEXT
+    global UNDISCLOSED_PREV
+
+    newSentence = ""
+
+    for sentence in sentenceList:
+        idx = 0
+        sent = word_tokenize(sentence)
+        kill = any(item in KILL_WORDS for item in sent)
+        
+        if not kill:
+            for word in sent:
+                if isNumber(word):
+                    if sent[idx+1] and sent[idx+1] in QUANTITIES:
+                        if sent[idx+2] and sent[idx+2] in CURRENCY_ORIGIN:
+                            if sent[idx+3] and sent[idx+3] in CURRENCIES:  
+                                if sent[idx+4] and sent[idx+4] in CURRENCY_TYPE:  
+                                    newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3] + " " + sent[idx+4]
+                                    # NUM QUANT CurOr Cur CurTyp
+                                else:
+                                    newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
+                                    # NUM QUANT CurOr Cur 
+                        elif sent[idx+2] and sent[idx+2] in CURRENCIES:
+                            if sent[idx+3] and sent[idx+3] in CURRENCY_TYPE:  
+                                newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
+                                # NUM QUANT Cur CurTyp
+                            else:
+                                newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
+                                # NUM QUANT Cur
+                    elif sent[idx+1] and sent[idx+1] in CURRENCY_ORIGIN:
+                        if sent[idx+2] and sent[idx+2] in CURRENCIES:  
+                            if sent[idx+3] and sent[idx+3] in CURRENCY_TYPE:  
+                                newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
+                                # NUM CurOr Cur CurTyp
+                            else:
+                                newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
+                                # NUM CurOr Cur
+                    elif sent[idx+1] and sent[idx+1] in CURRENCIES:
+                        if sent[idx+2] and sent[idx+2] in CURRENCY_TYPE:  
+                            newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
+                            # NUM Cur CurTyp
+                        else:
+                            newSentence = sent[idx] + " " + sent[idx+1] 
+                            # NUM Cur 
+                elif word in NUMBERS:
+                    if sent[idx+1] and sent[idx+1] in QUANTITIES:
+                        if sent[idx+2] and sent[idx+2] in CURRENCY_ORIGIN:
+                            if sent[idx+3] and sent[idx+3] in CURRENCIES:  
+                                if sent[idx+4] and sent[idx+4] in CURRENCY_TYPE:  
+                                    newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3] + " " + sent[idx+4]
+                                    # NUM QUANT CurOr Cur CurTyp
+                                else:
+                                    newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
+                                    # NUM QUANT CurOr Cur 
+                        elif sent[idx+2] and sent[idx+2] in CURRENCIES:
+                            if sent[idx+3] and sent[idx+3] in CURRENCY_TYPE:  
+                                newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
+                                # NUM QUANT Cur CurTyp
+                            else:
+                                newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
+                                # NUM QUANT Cur
+                    elif sent[idx+1] and sent[idx+1] in CURRENCY_ORIGIN:
+                        if sent[idx+2] and sent[idx+2] in CURRENCIES:  
+                            if sent[idx+3] and sent[idx+3] in CURRENCY_TYPE:  
+                                newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2] + " " + sent[idx+3]
+                                # NUM CurOr Cur CurTyp
+                            else:
+                                newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
+                                # NUM CurOr Cur
+                    elif sent[idx+1] and sent[idx+1] in CURRENCIES:
+                        if sent[idx+2] and sent[idx+2] in CURRENCY_TYPE:  
+                            newSentence = sent[idx] + " " + sent[idx+1] + " " + sent[idx+2]
+                            # NUM Cur CurTyp
+                        else:
+                            newSentence = sent[idx] + " " + sent[idx+1]
+                            # NUM Cur
+                elif word in UNDISCLOSED:
+                    if sent[idx-1] and sent[idx-1] in UNDISCLOSED_PREV:
+                        if sent[idx+1] and sent[idx+1] in UNDISCLOSED_NEXT:
+                            newSentence = sent[idx-1] + " " + sent[idx] + " " + sent[idx+1]
+                        else:
+                            newSentence = sent[idx-1] + " " + sent[idx]
+                    elif sent[idx+1] and sent[idx+1] in UNDISCLOSED_NEXT:
+                        newSentence = sent[idx] + " " + sent[idx+1]
+                    else:
+                        newSentence = word
+                elif newSentence == "":
+                    newSentence = "---"
+                idx += 1
+
+    return newSentence
+
+def findLoc(sentenceList:list):
+    global NER
+
+    acqLoc = []
+    locations = []
+
+    sent = str(sentenceList)
+    newSent = sent_tokenize(sent)
+
+    for sentence in sentenceList:
+        doc = nlp(sentence)
+        found = False
+        skip = False 
+        location = ""
+
+        for ent in doc.ents:
+            if skip:
+                skip = False
+            elif ent.label_ == "GPE":
+                location = "\"" + ent.text + "\""
+                #skip = True
+            # elif ent.label_ == "GPE":
+            #     location = "\"" + ent.text + "\"" 
+            if location not in locations:
+                locations.append(location)
+
+    acqLoc.clear()
+    #Filter list of possible locations
+    _skip = False
+    for loc in locations:
+        #print (loc)
+        if _skip:
+            _skip = False
+        else:
+            for sentence in newSent:
+                sentence = sentence.replace("\\n", " ")
+                idx = 0
+                # if loc.strip() in sentence.strip():
+                #print(loc, "\n")
+                words = word_tokenize(sentence)
+                for word in words:
+                    num_words = loc.split()
+                    #print(num_words, "\n")
+                    if len(num_words) == 1:
+                        if word in loc:
+                            # if idx >= 1:    
+                            #     if "of" in words[idx-1]:
+                            #         found = True
+                            #         pass # We dont want this one
+                            if idx < len(num_words):
+                                if "," in words[idx+1]:
+                                    data = word + ", " + words[idx+2]
+                                    data = data.replace("\\n", " ")
+                                    data = data.replace("\\", " ")
+                                    acqLoc.append(data)
+                                    _skip = True
+                                    found = True
+                    idx += 1
+                    if found:
+                        break
+                if found:
+                    break
+        if not found:
+            acqLoc.append(loc)
+        else: 
+            found = False
+
+    if len(acqLoc) > 1:
+        return acqLoc[1:]
+    elif acqLoc[0] == "":
+        return ["---"]
+    else:
+        return acqLoc
 
 
 ## Test and Train
@@ -464,14 +638,31 @@ def readFiles_ans():
         ans_list_list.append(ans_list)
 
 
+# Driver Section
+if (len(sys.argv)) == 2:
+    getFiles(sys.argv[1])
+    readFiles()
 
+    for story,sentence in zip(STORIES,SENTENCES):
+        story._dlramt = "\"" + findPrice(sentence) + "\""
+        if story._dlramt == "\"---\"":
+            story._dlramt = "---"
+
+    # for story,sentence in zip(STORIES,SENTENCES):
+    #     story._acqloc = findLoc(sentence) 
+    #     print(story._acqloc)
+
+    writeData(sys.argv[1])
+    
+else:
+    print("Please include files in the command line")
 
 
 # Driver Section
-if (len(sys.argv)) == 3:
-    getFiles_ans(sys.argv[1])
-    getFiles(sys.argv[2])
-    readFiles_ans()
-    readFiles()
-    writeData(sys.argv[2])
+# if (len(sys.argv)) == 3:
+#     getFiles_ans(sys.argv[1])
+#     getFiles(sys.argv[2])
+#     readFiles_ans()
+#     readFiles()
+#     writeData(sys.argv[2])
     
